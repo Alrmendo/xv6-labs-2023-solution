@@ -2,7 +2,7 @@
 
 MIT 6.828 (6.S081) (6.1810) xv6-labs-2023 experiments.
 
-22CLC08 Project at HCMUS (University of Science)
+Project at HCMUS (University of Science) - 22CLC08
 
 The code for each lab is available in the respective branch.
 
