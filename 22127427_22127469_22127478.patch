@@ -1,0 +1,467 @@
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..13566b8
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..bedf918
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MakefileSettings">
++    <option name="linkedExternalProjectsSettings">
++      <MakefileProjectSettings>
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="version" value="2" />
++      </MakefileProjectSettings>
++    </option>
++  </component>
++  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/Makefile b/Makefile
+index 365c91b..c5697b0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -188,7 +188,11 @@ UPROGS=\
+ 	$U/_grind\
+ 	$U/_wc\
+ 	$U/_zombie\
+-
++	$U/_sleep\
++	$U/_pingpong\
++	$U/_primes\
++	$U/_find\
++	$U/_xargs\
+ 
+ 
+ 
+diff --git a/time.txt b/time.txt
+new file mode 100644
+index 0000000..aaa6442
+--- /dev/null
++++ b/time.txt
+@@ -0,0 +1 @@
++41
+\ No newline at end of file
+diff --git a/user/find.c b/user/find.c
+new file mode 100644
+index 0000000..c321a9a
+--- /dev/null
++++ b/user/find.c
+@@ -0,0 +1,154 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "kernel/fs.h"
++#include "user/user.h"
++
++
++/*
++ * Function to remove trailing white spaces from a string
++ * Parameters:
++ *   - path: The string to be trimmed
++ * Returns:
++ *   - A pointer to the modified string
++ */
++char* 
++rtrim(char* path)
++{
++    static char newStr[DIRSIZ+1];  // Static buffer to hold the modified string
++    int whiteSpaceSize = 0;         // Variable to store the size of trailing white spaces
++    int bufSize = 0;                // Variable to store the size of the resulting string
++    
++    // Loop through the string from the end to find the trailing white spaces
++    for(char* p = path + strlen(path) - 1; p >= path && *p == ' '; --p) 
++    {
++        ++whiteSpaceSize;  // Counting the trailing white spaces
++    }
++    
++    // Calculate the size of the resulting string after trimming white spaces
++    bufSize = DIRSIZ - whiteSpaceSize;
++    
++    // Copy non-white space characters from the original string to the new string buffer
++    memmove(newStr, path, bufSize);
++    
++    // Null-terminate the new string
++    newStr[bufSize] = '\0';
++    
++    // Return the modified string
++    return newStr;
++}
++
++/*
++ * Recursive function to find a file in a directory and its subdirectories
++ * Parameters:
++ *   - path: The directory path to search
++ *   - name: The name of the file to find
++ */
++void 
++find(char* path, char* name)
++{
++    char buf[512], *p;              // Buffer to hold file paths, pointer for manipulation
++    int fd;                         // File descriptor for directory
++    struct dirent de;               // Directory entry structure
++    struct stat st;                 // File status structure
++    
++    // Open the directory specified by the path
++    if ((fd = open(path, 0)) < 0) 
++    {
++        fprintf(2, "find: cannot open %s\n", path);
++        return;
++    }
++
++    // Get file status of the directory
++    if (fstat(fd, &st) == -1) 
++    {
++        fprintf(2, "find: cannot fstat %s\n", path);
++        close(fd);
++        return;
++    }
++
++    // Switch statement to handle different types of files/directories
++    switch (st.type) 
++    {
++
++        case T_DEVICE:
++        case T_FILE:
++            fprintf(2, "find: %s not a path value.\n", path);
++            close(fd);
++            // printf("==='%s' is a File\n", path);
++            break;
++        case T_DIR:
++            // Check if the path length exceeds the buffer size
++            if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf)
++            {
++                printf("ls: path too long\n");
++                break;
++            }
++            
++            // Create the full path by copying the original path
++            strcpy(buf, path);
++            p = buf + strlen(buf);
++            *p++ = '/';
++            
++            // Read directory information for files and subdirectories
++            while (read(fd, &de, sizeof(de)) == sizeof de) 
++            {
++                if (de.inum == 0)
++                    continue;
++                
++                // Skip the current directory (.) and parent directory (..)
++                if (strcmp(".", rtrim(de.name)) == 0 || strcmp("..", rtrim(de.name)) == 0)
++                    continue;
++                
++                // Append the file/subdirectory name to the path
++                memmove(p, de.name, DIRSIZ);
++                
++                // Null-terminate the path
++                p[DIRSIZ] = '\0';
++                
++                // Get the file status of the current file/subdirectory
++                if (stat(buf, &st) == -1) 
++                {
++                    fprintf(2, "find: cannot stat '%s'\n", buf);
++                    continue;
++                }
++                
++                // Print the full path if the file name matches the search name
++                if (st.type == T_DEVICE || st.type == T_FILE) 
++                {
++                    if (strcmp(name, rtrim(de.name)) == 0) 
++                    {
++                        printf("%s\n", buf);
++                        /*for (int i = 0; buf[i] != '\0'; ++i) 
++                        {
++                            printf("'%d'\n", buf[i]);
++                        }*/
++
++                    }
++                }
++                // Recursively search if the entry is a directory
++                else if (st.type == T_DIR) 
++                {
++                    find(buf, name);
++                }
++            }
++    }
++}
++
++int 
++main(int argc, char* argv[])
++{
++    // Check if the number of command-line arguments is correct
++    if (argc != 3) 
++    {
++        fprintf(2, "Usage: find path file.\n");
++        exit(0);
++    }
++    
++    char* path = argv[1];  // Extract the path from command-line arguments
++    char* name = argv[2];  // Extract the file name to search from command-line arguments
++    
++    // Call the find function to search for the file
++    find(path, name);
++    
++    exit(0);
++}
+\ No newline at end of file
+diff --git a/user/pingpong.c b/user/pingpong.c
+new file mode 100644
+index 0000000..cee7013
+--- /dev/null
++++ b/user/pingpong.c
+@@ -0,0 +1,55 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++
++int main()
++{
++    int p2c[2], c2p[2];
++    int child_id;
++    char* ping = "ping";
++    char* pong = "pong";
++    char buf[512] = {0};
++
++    // Create pipes
++    if (pipe(p2c) == -1 || pipe(c2p) == -1) 
++    {
++        fprintf(2, "Error: pipe creation error.\n");
++        exit(1);
++    }
++
++    child_id = fork();
++    if (child_id < 0) 
++    {
++        fprintf(2, "Error: fork failed.\n");
++        exit(1);
++    }
++
++    if(child_id != 0)
++    {
++        // parent process
++        close(p2c[0]); // close read only write
++        close(c2p[1]); // close write only read
++
++        // write ping to the child process (p2c)
++        write(p2c[1], ping, strlen(ping));
++
++        // after write then read from the child process (c2p)
++        read(c2p[0], buf, sizeof(buf));
++        printf("%d: received %s\n", getpid(), buf);
++        exit(0);
++    }
++    else
++    {
++        // child process
++        close(p2c[1]); // close write only read
++        close(c2p[0]); // close read only write
++
++        // read from the parent process
++        read(p2c[0], buf, sizeof(buf));
++        printf("%d: received %s\n", getpid(), buf);
++
++        // write to the parent process
++        write(c2p[1], pong, strlen(pong));
++        exit(0);
++    }
++}
+diff --git a/user/primes.c b/user/primes.c
+new file mode 100644
+index 0000000..b4f4b31
+--- /dev/null
++++ b/user/primes.c
+@@ -0,0 +1,82 @@
++#include "kernel/types.h"
++#include "user/user.h"
++
++// Dùng sàng Eratosthenes
++void
++parent(int outfd, int maxn)
++{   
++    // Đầu ra là outfd (file description)
++    for (int i = 2; i <= maxn; ++i)
++    {
++        write(outfd, &i, 4);
++        // 4 là 4 byte (32 bits) là kích thước của một biến kiểu int
++    }
++}
++
++void
++child(int infd)
++{
++    int btr;
++    int n, prime;
++    int p[2];
++
++    // process first number
++    btr = read(infd, &n, 4); // lưu kết quả trả về từ hàm read
++    if (btr == 0)
++    {
++        return;
++    }
++    printf("prime %d\n", n);
++    prime = n;
++
++    // process the rest number
++    pipe(p);
++    if (fork() == 0) // tạo một quy trình con
++    {
++        close(p[1]);
++        // Đóng đầu ghi của ống trong quá trình con. Quá trình con chỉ đọc dữ liệu từ ống, không ghi vào ống này.
++        child(p[0]);
++        // Gọi lại hàm child đệ quy với đầu đọc của ống làm đầu vào. Quá trình con tiếp tục xử lý các số từ đầu vào (p[0]).
++        close(p[0]);
++        // Đóng đầu đọc của ống trong quá trình con
++        exit(0);
++    }
++
++    close(p[0]);
++    while (read(infd, &n, 4)) 
++    {
++        // Nếu n là số nguyên tố
++        if (n % prime == 0)
++        {
++            continue;
++        }
++        // ghi của ống p[1] để chuyển đến các quy trình con khác để tiếp tục xử lý
++        write(p[1], &n, 4);
++    }
++    close(p[1]); // Sau khi tất cả các số đã được xử lý, đầu ghi của ống p[1]
++    wait(0); // đợi cho đến khi tất cả các quy trình con kết thúc
++}
++
++int
++main(int argc, char *argv[])
++{
++    int p[2]; // parent => child
++    pipe(p);
++    // parent
++    if(fork()) 
++    {
++        close(p[0]);
++        parent(p[1], 35);
++        close(p[1]);
++        wait(0);
++    }
++    // child
++    else 
++    {
++        close(p[1]);
++        child(p[0]);
++        close(p[0]);
++        exit(0);
++    }
++    exit(0);
++}
+\ No newline at end of file
+diff --git a/user/sleep.c b/user/sleep.c
+new file mode 100644
+index 0000000..f5fb211
+--- /dev/null
++++ b/user/sleep.c
+@@ -0,0 +1,22 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++
++int 
++main(int argc, char* argv[]) // Điểm nhập của chương trình với đối số dòng lệnh
++{
++    // Kiểm tra xem số lượng đối số được cung cấp có khác 2 không
++    if (argc != 2) 
++    {
++        fprintf(2, "Usage: sleep + [time]\n");
++    }
++    int time = atoi(*++argv);
++    // Chuyển đổi biểu diễn chuỗi của thời gian thành số nguyên bằng cách sử dụng hàm atoi
++    // Tăng con trỏ argv để trỏ đến đối số tiếp theo (thời gian) và giải tham chiếu nó để lấy giá trị
++    // Lưu trữ giá trị thời gian đã chuyển đổi vào biến 'time'
++    if (sleep(time) != 0) 
++    {
++        fprintf(2, "Error in sleep sys_call!\n");
++    }
++    exit(0); // Thoát khỏi chương trình 0 (thực thi thành công)
++}
+\ No newline at end of file
+diff --git a/user/xargs.c b/user/xargs.c
+new file mode 100644
+index 0000000..1d1d496
+--- /dev/null
++++ b/user/xargs.c
+@@ -0,0 +1,49 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++#include "kernel/param.h"
++
++int main(int argc, char *argv[])
++{
++    char *args[MAXARG];
++    char line[512];
++    int i;
++
++    if(argc < 2){
++        fprintf(2, "Usage: xargs command ...\n");
++        exit(1);
++    }
++
++    // Check for -n option and shift arguments if found
++    if(argv[1][0] == '-' && argv[1][1] == 'n' && argv[1][2] == '\0') {
++        for(i = 0; i < argc-3; i++){
++            args[i] = argv[i+3];
++        }
++    } else {
++        for(i = 0; i < argc-1; i++){
++            args[i] = argv[i+1];
++        }
++    }
++
++    args[i] = line;
++    args[i+1] = 0;
++
++    while(1){
++        gets(line, sizeof(line));
++        if(line[0] == '\0') break;  // break the loop if gets returns an empty string
++
++        int len = strlen(line);
++        if (len > 0 && line[len - 1] == '\n') {
++            line[len - 1] = 0;  // replace newline with null
++        }
++
++        if(fork() == 0){
++            exec(args[0], args);
++            fprintf(2, "\n", args[0]);
++            exit(1);
++        }
++        wait(0);
++    }
++
++    exit(0);
++}
