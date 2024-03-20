@@ -1,0 +1,33 @@
+1. Looking at the backtrace output, which function called syscall?
+-> Syscall được gọi bởi usertrap, được thể hiện trong output của backtrace.
+
+2. What is the value of p->trapframe->a7 and what does that value represent? (Hint: look user/initcode.S, the first user program xv6 starts.)
+-   Giá trị của p->trapframe->a7 bằng 7
+-	Mở thư mục initcode.S trong user, ta thấy number syscall được lưu trong thanh ghi a7.
+-	Trong trường hợp này, number syscall là 7. Mở file kernal/syscall.h để xem chi tiết. Số 7 đại dại cho SYS_exec.
+
+3. What was the previous mode that the CPU was in?
+-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, bit SPP chỉ ra cấp độ đặc quyền mà một hart đang thực thi trước khi vào chế độ giám sát. Khi một trap được thực hiện, SPP được thiết lập thành 0 nếu trap xuất phát từ chế độ người dùng, hoặc 1 nếu không. Khi một lệnh SRET (xem Mục 3.3.2) được thực thi để trở về từ trình xử lý trap, cấp độ đặc quyền được thiết lập tương ứng.
+-	Như ta có thể thấy, giá trị của bit SPP là 0, điều này chỉ ra rằng cấp độ đặc quyền trước khi vào kernel để thực hiện cuộc gọi hệ thống là chế độ người dùng (user mode).
+-	Tiếp theo, thực hiện thay thế câu lệnh num = p->trapframe->a7 bằng num = * (int *) 0 trong hàm syscall của kernel/syscall.c.
+
+4. Write down the assembly instruction the kernel is panicing at. Which register corresponds to the varialable num?
+xv6 kernel is booting
+
+hart 2 starting
+hart 1 starting
+scause 0x000000000000000d
+sepc=0x0000000080002052 stval=0x0000000000000000
+panic: kerneltrap
+
+-	Sepc cho biết địa chỉ của mã nơi mà kernal đang gặp sự cố. Trong trường hợp này ta tìm kiếm địa chỉ 80002052 trong kernal/kernal.asm
+-	Dựa vào đoạn code trên, có thể thấy chính sự thay đổi câu lệnh gây ra lỗi cho kernal. Tương đương cho câu lệnh lỗi này băng ngôn ngữ assembly là lw a3,0(zero) với num là s2.
+
+5. Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in scause above? (See description of scause in RISC-V privileged instructions)
+-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, giá trị 13 ở đây đại diện cho một lỗi trang tải. Cụ thể, một lỗi đã xảy ra trong khi tải dữ liệu từ địa chỉ bộ nhớ 0 vào s2. Có thể thấy từ sách giáo trình, địa chỉ 0 không ánh xạ vào không gian kernel; thay vào đó, nó bắt đầu tại địa chỉ ảo 0x80000000.
+
+6. What is the name of the binary that was running when the kernel paniced? What is its process id (pid)?
+-    Thông tin này có thể được lấy bằng cách in ra trường 'name' của cấu trúc dữ liệu 'proc':
+$1 = "initcode\000\000\000\000\000\000\000"
+-    Có thể thấy rằng chương trình người dùng này là initcode, chính là quá trình đầu tiên trong xv6. In ra cấu trúc proc sẽ cho phép ta kiểm tra thêm thông tin về quá trình này.
+-    Khi đó ta thấy pid của initcode là 1

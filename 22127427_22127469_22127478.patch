@@ -1,0 +1,3464 @@
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..13566b8
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..bedf918
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MakefileSettings">
++    <option name="linkedExternalProjectsSettings">
++      <MakefileProjectSettings>
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="version" value="2" />
++      </MakefileProjectSettings>
++    </option>
++  </component>
++  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/22127427_22127469_22127478.patch b/22127427_22127469_22127478.patch
+new file mode 100644
+index 0000000..1cb5c11
+--- /dev/null
++++ b/22127427_22127469_22127478.patch
+@@ -0,0 +1,2586 @@
++diff --git a/.idea/.gitignore b/.idea/.gitignore
++new file mode 100644
++index 0000000..13566b8
++--- /dev/null
+++++ b/.idea/.gitignore
++@@ -0,0 +1,8 @@
+++# Default ignored files
+++/shelf/
+++/workspace.xml
+++# Editor-based HTTP Client requests
+++/httpRequests/
+++# Datasource local storage ignored files
+++/dataSources/
+++/dataSources.local.xml
++diff --git a/.idea/misc.xml b/.idea/misc.xml
++new file mode 100644
++index 0000000..bedf918
++--- /dev/null
+++++ b/.idea/misc.xml
++@@ -0,0 +1,13 @@
+++<?xml version="1.0" encoding="UTF-8"?>
+++<project version="4">
+++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+++  <component name="MakefileSettings">
+++    <option name="linkedExternalProjectsSettings">
+++      <MakefileProjectSettings>
+++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+++        <option name="version" value="2" />
+++      </MakefileProjectSettings>
+++    </option>
+++  </component>
+++  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+++</project>
++\ No newline at end of file
++diff --git a/.idea/vcs.xml b/.idea/vcs.xml
++new file mode 100644
++index 0000000..35eb1dd
++--- /dev/null
+++++ b/.idea/vcs.xml
++@@ -0,0 +1,6 @@
+++<?xml version="1.0" encoding="UTF-8"?>
+++<project version="4">
+++  <component name="VcsDirectoryMappings">
+++    <mapping directory="" vcs="Git" />
+++  </component>
+++</project>
++\ No newline at end of file
++diff --git a/22127427_22127469_22127478.patch b/22127427_22127469_22127478.patch
++new file mode 100644
++index 0000000..998ed61
++--- /dev/null
+++++ b/22127427_22127469_22127478.patch
++@@ -0,0 +1,1709 @@
+++diff --git a/.idea/.gitignore b/.idea/.gitignore
+++new file mode 100644
+++index 0000000..13566b8
+++--- /dev/null
++++++ b/.idea/.gitignore
+++@@ -0,0 +1,8 @@
++++# Default ignored files
++++/shelf/
++++/workspace.xml
++++# Editor-based HTTP Client requests
++++/httpRequests/
++++# Datasource local storage ignored files
++++/dataSources/
++++/dataSources.local.xml
+++diff --git a/.idea/misc.xml b/.idea/misc.xml
+++new file mode 100644
+++index 0000000..bedf918
+++--- /dev/null
++++++ b/.idea/misc.xml
+++@@ -0,0 +1,13 @@
++++<?xml version="1.0" encoding="UTF-8"?>
++++<project version="4">
++++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++++  <component name="MakefileSettings">
++++    <option name="linkedExternalProjectsSettings">
++++      <MakefileProjectSettings>
++++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++++        <option name="version" value="2" />
++++      </MakefileProjectSettings>
++++    </option>
++++  </component>
++++  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
++++</project>
+++\ No newline at end of file
+++diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+++new file mode 100644
+++index 0000000..35eb1dd
+++--- /dev/null
++++++ b/.idea/vcs.xml
+++@@ -0,0 +1,6 @@
++++<?xml version="1.0" encoding="UTF-8"?>
++++<project version="4">
++++  <component name="VcsDirectoryMappings">
++++    <mapping directory="" vcs="Git" />
++++  </component>
++++</project>
+++\ No newline at end of file
+++diff --git a/22127427_22127469_22127478.patch b/22127427_22127469_22127478.patch
+++new file mode 100644
+++index 0000000..7d05205
+++--- /dev/null
++++++ b/22127427_22127469_22127478.patch
+++@@ -0,0 +1,832 @@
++++diff --git a/.idea/.gitignore b/.idea/.gitignore
++++new file mode 100644
++++index 0000000..13566b8
++++--- /dev/null
+++++++ b/.idea/.gitignore
++++@@ -0,0 +1,8 @@
+++++# Default ignored files
+++++/shelf/
+++++/workspace.xml
+++++# Editor-based HTTP Client requests
+++++/httpRequests/
+++++# Datasource local storage ignored files
+++++/dataSources/
+++++/dataSources.local.xml
++++diff --git a/.idea/misc.xml b/.idea/misc.xml
++++new file mode 100644
++++index 0000000..bedf918
++++--- /dev/null
+++++++ b/.idea/misc.xml
++++@@ -0,0 +1,13 @@
+++++<?xml version="1.0" encoding="UTF-8"?>
+++++<project version="4">
+++++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+++++  <component name="MakefileSettings">
+++++    <option name="linkedExternalProjectsSettings">
+++++      <MakefileProjectSettings>
+++++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+++++        <option name="version" value="2" />
+++++      </MakefileProjectSettings>
+++++    </option>
+++++  </component>
+++++  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+++++</project>
++++\ No newline at end of file
++++diff --git a/.idea/vcs.xml b/.idea/vcs.xml
++++new file mode 100644
++++index 0000000..35eb1dd
++++--- /dev/null
+++++++ b/.idea/vcs.xml
++++@@ -0,0 +1,6 @@
+++++<?xml version="1.0" encoding="UTF-8"?>
+++++<project version="4">
+++++  <component name="VcsDirectoryMappings">
+++++    <mapping directory="" vcs="Git" />
+++++  </component>
+++++</project>
++++\ No newline at end of file
++++diff --git a/Makefile b/Makefile
++++index 365c91b..264c4de 100644
++++--- a/Makefile
+++++++ b/Makefile
++++@@ -30,7 +30,8 @@ OBJS = \
++++   $K/sysfile.o \
++++   $K/kernelvec.o \
++++   $K/plic.o \
++++-  $K/virtio_disk.o
+++++  $K/virtio_disk.o\
+++++  $K/sysinfo.o \
++++ 
++++ OBJS_KCSAN = \
++++   $K/start.o \
++++@@ -172,6 +173,8 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
++++ .PRECIOUS: %.o
++++ 
++++ UPROGS=\
+++++	$U/_trace\
+++++	$U/_sysinfotest\
++++ 	$U/_cat\
++++ 	$U/_echo\
++++ 	$U/_forktest\
++++@@ -188,7 +191,11 @@ UPROGS=\
++++ 	$U/_grind\
++++ 	$U/_wc\
++++ 	$U/_zombie\
++++-
+++++	$U/_sleep\
+++++	$U/_pingpong\
+++++	$U/_primes\
+++++	$U/_find\
+++++	$U/_xargs\
++++ 
++++ 
++++ 
++++diff --git a/command.txt b/command.txt
++++new file mode 100644
++++index 0000000..9c66511
++++--- /dev/null
+++++++ b/command.txt
++++@@ -0,0 +1,12 @@
+++++./grade-lab-syscall [syscall name]
+++++
+++++test trace:
+++++$ trace 32 grep hello README
+++++$ trace 2147483647 grep hello README
+++++$ grep hello README
+++++$ trace 2 usertests forkforkfork
+++++
+++++swtich  to syscall:
+++++$ git fetch
+++++$ git checkout syscall
+++++$ make clean
++++\ No newline at end of file
++++diff --git a/kernel/defs.h b/kernel/defs.h
++++index a3c962b..3b4319a 100644
++++--- a/kernel/defs.h
+++++++ b/kernel/defs.h
++++@@ -8,6 +8,7 @@ struct spinlock;
++++ struct sleeplock;
++++ struct stat;
++++ struct superblock;
+++++struct sysinfo;
++++ 
++++ // bio.c
++++ void            binit(void);
++++@@ -16,6 +17,7 @@ void            brelse(struct buf*);
++++ void            bwrite(struct buf*);
++++ void            bpin(struct buf*);
++++ void            bunpin(struct buf*);
+++++int             freemem(void);
++++ 
++++ // console.c
++++ void            consoleinit(void);
++++@@ -69,6 +71,7 @@ void            initlog(int, struct superblock*);
++++ void            log_write(struct buf*);
++++ void            begin_op(void);
++++ void            end_op(void);
+++++int             nproc(void);
++++ 
++++ // pipe.c
++++ int             pipealloc(struct file**, struct file**);
++++@@ -110,6 +113,9 @@ void            procdump(void);
++++ // swtch.S
++++ void            swtch(struct context*, struct context*);
++++ 
+++++// sysinfo.c
+++++int             systeminfo(uint64);
+++++
++++ // spinlock.c
++++ void            acquire(struct spinlock*);
++++ int             holding(struct spinlock*);
++++diff --git a/kernel/kalloc.c b/kernel/kalloc.c
++++index 0699e7e..0e149f1 100644
++++--- a/kernel/kalloc.c
+++++++ b/kernel/kalloc.c
++++@@ -8,6 +8,8 @@
++++ #include "spinlock.h"
++++ #include "riscv.h"
++++ #include "defs.h"
+++++#include "kernel/sleeplock.h"
+++++#include "kernel/proc.h"
++++ 
++++ void freerange(void *pa_start, void *pa_end);
++++ 
++++@@ -80,3 +82,19 @@ kalloc(void)
++++     memset((char*)r, 5, PGSIZE); // fill with junk
++++   return (void*)r;
++++ }
+++++
+++++// Get the number of bytes of free memory
+++++int
+++++freemem(void)
+++++{
+++++  int n = 0;
+++++  struct run *r;
+++++  acquire(&kmem.lock);
+++++  
+++++  for (r = kmem.freelist; r; r = r->next)
+++++    n++;
+++++
+++++  release(&kmem.lock);
+++++
+++++  return n * 4096;
+++++}
++++\ No newline at end of file
++++diff --git a/kernel/proc.c b/kernel/proc.c
++++index 58a8a0b..71fc009 100644
++++--- a/kernel/proc.c
+++++++ b/kernel/proc.c
++++@@ -10,6 +10,8 @@ struct cpu cpus[NCPU];
++++ 
++++ struct proc proc[NPROC];
++++ 
+++++struct proc ptable[NPROC];
+++++
++++ struct proc *initproc;
++++ 
++++ int nextpid = 1;
++++@@ -296,6 +298,9 @@ fork(void)
++++   }
++++   np->sz = p->sz;
++++ 
+++++  // copy trace mask value
+++++  np->mask = p->mask;
+++++
++++   // copy saved user registers.
++++   *(np->trapframe) = *(p->trapframe);
++++ 
++++@@ -686,3 +691,19 @@ procdump(void)
++++     printf("\n");
++++   }
++++ }
+++++
+++++int
+++++nproc(void)
+++++{
+++++  int n = 0;
+++++  struct proc *p;
+++++
+++++  for(p = proc; p < &proc[NPROC]; p++) {
+++++    acquire(&p->lock);
+++++    if(p->state != UNUSED)
+++++      n++;
+++++    release(&p->lock);
+++++  }
+++++
+++++  return n;
+++++}
++++\ No newline at end of file
++++diff --git a/kernel/proc.h b/kernel/proc.h
++++index d021857..ac9816e 100644
++++--- a/kernel/proc.h
+++++++ b/kernel/proc.h
++++@@ -85,6 +85,9 @@ enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
++++ struct proc {
++++   struct spinlock lock;
++++ 
+++++  // trace mask value
+++++  uint64 mask;                  
+++++
++++   // p->lock must be held when using these:
++++   enum procstate state;        // Process state
++++   void *chan;                  // If non-zero, sleeping on chan
++++@@ -103,5 +106,5 @@ struct proc {
++++   struct context context;      // swtch() here to run process
++++   struct file *ofile[NOFILE];  // Open files
++++   struct inode *cwd;           // Current directory
++++-  char name[16];               // Process name (debugging)
+++++  char name[16];               // Process name (debugging)    
++++ };
++++diff --git a/kernel/syscall.c b/kernel/syscall.c
++++index ed65409..444c841 100644
++++--- a/kernel/syscall.c
+++++++ b/kernel/syscall.c
++++@@ -6,6 +6,7 @@
++++ #include "proc.h"
++++ #include "syscall.h"
++++ #include "defs.h"
+++++#include "sysinfo.h"
++++ 
++++ // Fetch the uint64 at addr from the current process.
++++ int
++++@@ -101,6 +102,8 @@ extern uint64 sys_unlink(void);
++++ extern uint64 sys_link(void);
++++ extern uint64 sys_mkdir(void);
++++ extern uint64 sys_close(void);
+++++extern uint64 sys_trace(void);
+++++extern uint64 sys_sysinfo(void);
++++ 
++++ // An array mapping syscall numbers from syscall.h
++++ // to the function that handles the system call.
++++@@ -126,6 +129,34 @@ static uint64 (*syscalls[])(void) = {
++++ [SYS_link]    sys_link,
++++ [SYS_mkdir]   sys_mkdir,
++++ [SYS_close]   sys_close,
+++++[SYS_trace]   sys_trace,
+++++[SYS_sysinfo] sys_sysinfo,
+++++};
+++++
+++++// the system call name index array
+++++static char* syscalls_name[] = {
+++++[SYS_fork]    "syscall fork",
+++++[SYS_exit]    "syscall exit",
+++++[SYS_wait]    "syscall wait",
+++++[SYS_pipe]    "syscall pipe",
+++++[SYS_read]    "syscall read",
+++++[SYS_kill]    "syscall kill",
+++++[SYS_exec]    "syscall exec",
+++++[SYS_fstat]   "syscall fstat",
+++++[SYS_chdir]   "syscall chdir",
+++++[SYS_dup]     "syscall dup",
+++++[SYS_getpid]  "syscall getpid",
+++++[SYS_sbrk]    "syscall sbrk",
+++++[SYS_sleep]   "syscall sleep",
+++++[SYS_uptime]  "syscall uptime",
+++++[SYS_open]    "syscall open",
+++++[SYS_write]   "syscall write",
+++++[SYS_mknod]   "syscall mknod",
+++++[SYS_unlink]  "syscall unlink",
+++++[SYS_link]    "syscall link",
+++++[SYS_mkdir]   "syscall mkdir",
+++++[SYS_close]   "syscall close",
+++++[SYS_trace]   "syscall trace",
++++ };
++++ 
++++ void
++++@@ -138,7 +169,11 @@ syscall(void)
++++   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
++++     // Use num to lookup the system call function for num, call it,
++++     // and store its return value in p->trapframe->a0
++++-    p->trapframe->a0 = syscalls[num]();
+++++    uint64 a0 = syscalls[num]();
+++++    if ((p->mask >> num) & 0b1) {
+++++      printf("%d: %s -> %d\n", p->pid, syscalls_name[num], a0);
+++++    }
+++++    p->trapframe->a0 = a0;
++++   } else {
++++     printf("%d %s: unknown sys call %d\n",
++++             p->pid, p->name, num);
++++diff --git a/kernel/syscall.h b/kernel/syscall.h
++++index bc5f356..0dfedc7 100644
++++--- a/kernel/syscall.h
+++++++ b/kernel/syscall.h
++++@@ -20,3 +20,5 @@
++++ #define SYS_link   19
++++ #define SYS_mkdir  20
++++ #define SYS_close  21
+++++#define SYS_trace  22
+++++#define SYS_sysinfo 23
++++diff --git a/kernel/sysfile.c b/kernel/sysfile.c
++++index 16b668c..7d79481 100644
++++--- a/kernel/sysfile.c
+++++++ b/kernel/sysfile.c
++++@@ -15,6 +15,7 @@
++++ #include "sleeplock.h"
++++ #include "file.h"
++++ #include "fcntl.h"
+++++#include "sysinfo.h"
++++ 
++++ // Fetch the nth word-sized system call argument as a file descriptor
++++ // and return both the descriptor and the corresponding struct file.
++++diff --git a/kernel/sysinfo.c b/kernel/sysinfo.c
++++new file mode 100644
++++index 0000000..09cdb35
++++--- /dev/null
+++++++ b/kernel/sysinfo.c
++++@@ -0,0 +1,22 @@
+++++#include "types.h"
+++++#include "riscv.h"
+++++#include "param.h"
+++++#include "spinlock.h"
+++++#include "defs.h"
+++++#include "sysinfo.h"
+++++#include "proc.h"
+++++
+++++// Get current system info
+++++// addr is a user virtual address, pointing to a struct sysinfo.
+++++int
+++++systeminfo(uint64 addr) {
+++++  struct proc *p = myproc();
+++++  struct sysinfo info;
+++++
+++++  info.freemem = freemem();
+++++  info.nproc = nproc();
+++++
+++++  if(copyout(p->pagetable, addr, (char *)&info, sizeof(info)) < 0)
+++++    return -1;
+++++  return 0;
+++++}
++++\ No newline at end of file
++++diff --git a/kernel/sysproc.c b/kernel/sysproc.c
++++index 3b4d5bd..79fd2a5 100644
++++--- a/kernel/sysproc.c
+++++++ b/kernel/sysproc.c
++++@@ -5,6 +5,7 @@
++++ #include "memlayout.h"
++++ #include "spinlock.h"
++++ #include "proc.h"
+++++#include "sysinfo.h"
++++ 
++++ uint64
++++ sys_exit(void)
++++@@ -91,3 +92,24 @@ sys_uptime(void)
++++   release(&tickslock);
++++   return xticks;
++++ }
+++++
+++++//sys_trace
+++++uint64
+++++sys_trace(void)
+++++{
+++++  int mask;
+++++
+++++  argint(0, &mask);
+++++  struct proc *p = myproc();
+++++  p->mask = mask;
+++++  return 0;
+++++}
+++++
+++++//sys_info
+++++uint64
+++++sys_sysinfo(void)
+++++{
+++++  uint64 info;
+++++  argaddr(0, &info);
+++++  return systeminfo(info);
+++++}
++++\ No newline at end of file
++++diff --git a/time.txt b/time.txt
++++new file mode 100644
++++index 0000000..aaa6442
++++--- /dev/null
+++++++ b/time.txt
++++@@ -0,0 +1 @@
+++++41
++++\ No newline at end of file
++++diff --git a/user/find.c b/user/find.c
++++new file mode 100644
++++index 0000000..c321a9a
++++--- /dev/null
+++++++ b/user/find.c
++++@@ -0,0 +1,154 @@
+++++#include "kernel/types.h"
+++++#include "kernel/stat.h"
+++++#include "kernel/fs.h"
+++++#include "user/user.h"
+++++
+++++
+++++/*
+++++ * Function to remove trailing white spaces from a string
+++++ * Parameters:
+++++ *   - path: The string to be trimmed
+++++ * Returns:
+++++ *   - A pointer to the modified string
+++++ */
+++++char* 
+++++rtrim(char* path)
+++++{
+++++    static char newStr[DIRSIZ+1];  // Static buffer to hold the modified string
+++++    int whiteSpaceSize = 0;         // Variable to store the size of trailing white spaces
+++++    int bufSize = 0;                // Variable to store the size of the resulting string
+++++    
+++++    // Loop through the string from the end to find the trailing white spaces
+++++    for(char* p = path + strlen(path) - 1; p >= path && *p == ' '; --p) 
+++++    {
+++++        ++whiteSpaceSize;  // Counting the trailing white spaces
+++++    }
+++++    
+++++    // Calculate the size of the resulting string after trimming white spaces
+++++    bufSize = DIRSIZ - whiteSpaceSize;
+++++    
+++++    // Copy non-white space characters from the original string to the new string buffer
+++++    memmove(newStr, path, bufSize);
+++++    
+++++    // Null-terminate the new string
+++++    newStr[bufSize] = '\0';
+++++    
+++++    // Return the modified string
+++++    return newStr;
+++++}
+++++
+++++/*
+++++ * Recursive function to find a file in a directory and its subdirectories
+++++ * Parameters:
+++++ *   - path: The directory path to search
+++++ *   - name: The name of the file to find
+++++ */
+++++void 
+++++find(char* path, char* name)
+++++{
+++++    char buf[512], *p;              // Buffer to hold file paths, pointer for manipulation
+++++    int fd;                         // File descriptor for directory
+++++    struct dirent de;               // Directory entry structure
+++++    struct stat st;                 // File status structure
+++++    
+++++    // Open the directory specified by the path
+++++    if ((fd = open(path, 0)) < 0) 
+++++    {
+++++        fprintf(2, "find: cannot open %s\n", path);
+++++        return;
+++++    }
+++++
+++++    // Get file status of the directory
+++++    if (fstat(fd, &st) == -1) 
+++++    {
+++++        fprintf(2, "find: cannot fstat %s\n", path);
+++++        close(fd);
+++++        return;
+++++    }
+++++
+++++    // Switch statement to handle different types of files/directories
+++++    switch (st.type) 
+++++    {
+++++
+++++        case T_DEVICE:
+++++        case T_FILE:
+++++            fprintf(2, "find: %s not a path value.\n", path);
+++++            close(fd);
+++++            // printf("==='%s' is a File\n", path);
+++++            break;
+++++        case T_DIR:
+++++            // Check if the path length exceeds the buffer size
+++++            if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf)
+++++            {
+++++                printf("ls: path too long\n");
+++++                break;
+++++            }
+++++            
+++++            // Create the full path by copying the original path
+++++            strcpy(buf, path);
+++++            p = buf + strlen(buf);
+++++            *p++ = '/';
+++++            
+++++            // Read directory information for files and subdirectories
+++++            while (read(fd, &de, sizeof(de)) == sizeof de) 
+++++            {
+++++                if (de.inum == 0)
+++++                    continue;
+++++                
+++++                // Skip the current directory (.) and parent directory (..)
+++++                if (strcmp(".", rtrim(de.name)) == 0 || strcmp("..", rtrim(de.name)) == 0)
+++++                    continue;
+++++                
+++++                // Append the file/subdirectory name to the path
+++++                memmove(p, de.name, DIRSIZ);
+++++                
+++++                // Null-terminate the path
+++++                p[DIRSIZ] = '\0';
+++++                
+++++                // Get the file status of the current file/subdirectory
+++++                if (stat(buf, &st) == -1) 
+++++                {
+++++                    fprintf(2, "find: cannot stat '%s'\n", buf);
+++++                    continue;
+++++                }
+++++                
+++++                // Print the full path if the file name matches the search name
+++++                if (st.type == T_DEVICE || st.type == T_FILE) 
+++++                {
+++++                    if (strcmp(name, rtrim(de.name)) == 0) 
+++++                    {
+++++                        printf("%s\n", buf);
+++++                        /*for (int i = 0; buf[i] != '\0'; ++i) 
+++++                        {
+++++                            printf("'%d'\n", buf[i]);
+++++                        }*/
+++++
+++++                    }
+++++                }
+++++                // Recursively search if the entry is a directory
+++++                else if (st.type == T_DIR) 
+++++                {
+++++                    find(buf, name);
+++++                }
+++++            }
+++++    }
+++++}
+++++
+++++int 
+++++main(int argc, char* argv[])
+++++{
+++++    // Check if the number of command-line arguments is correct
+++++    if (argc != 3) 
+++++    {
+++++        fprintf(2, "Usage: find path file.\n");
+++++        exit(0);
+++++    }
+++++    
+++++    char* path = argv[1];  // Extract the path from command-line arguments
+++++    char* name = argv[2];  // Extract the file name to search from command-line arguments
+++++    
+++++    // Call the find function to search for the file
+++++    find(path, name);
+++++    
+++++    exit(0);
+++++}
++++\ No newline at end of file
++++diff --git a/user/pingpong.c b/user/pingpong.c
++++new file mode 100644
++++index 0000000..cee7013
++++--- /dev/null
+++++++ b/user/pingpong.c
++++@@ -0,0 +1,55 @@
+++++#include "kernel/types.h"
+++++#include "kernel/stat.h"
+++++#include "user/user.h"
+++++
+++++int main()
+++++{
+++++    int p2c[2], c2p[2];
+++++    int child_id;
+++++    char* ping = "ping";
+++++    char* pong = "pong";
+++++    char buf[512] = {0};
+++++
+++++    // Create pipes
+++++    if (pipe(p2c) == -1 || pipe(c2p) == -1) 
+++++    {
+++++        fprintf(2, "Error: pipe creation error.\n");
+++++        exit(1);
+++++    }
+++++
+++++    child_id = fork();
+++++    if (child_id < 0) 
+++++    {
+++++        fprintf(2, "Error: fork failed.\n");
+++++        exit(1);
+++++    }
+++++
+++++    if(child_id != 0)
+++++    {
+++++        // parent process
+++++        close(p2c[0]); // close read only write
+++++        close(c2p[1]); // close write only read
+++++
+++++        // write ping to the child process (p2c)
+++++        write(p2c[1], ping, strlen(ping));
+++++
+++++        // after write then read from the child process (c2p)
+++++        read(c2p[0], buf, sizeof(buf));
+++++        printf("%d: received %s\n", getpid(), buf);
+++++        exit(0);
+++++    }
+++++    else
+++++    {
+++++        // child process
+++++        close(p2c[1]); // close write only read
+++++        close(c2p[0]); // close read only write
+++++
+++++        // read from the parent process
+++++        read(p2c[0], buf, sizeof(buf));
+++++        printf("%d: received %s\n", getpid(), buf);
+++++
+++++        // write to the parent process
+++++        write(c2p[1], pong, strlen(pong));
+++++        exit(0);
+++++    }
+++++}
++++diff --git a/user/primes.c b/user/primes.c
++++new file mode 100644
++++index 0000000..b4f4b31
++++--- /dev/null
+++++++ b/user/primes.c
++++@@ -0,0 +1,82 @@
+++++#include "kernel/types.h"
+++++#include "user/user.h"
+++++
+++++// Dùng sàng Eratosthenes
+++++void
+++++parent(int outfd, int maxn)
+++++{   
+++++    // Đầu ra là outfd (file description)
+++++    for (int i = 2; i <= maxn; ++i)
+++++    {
+++++        write(outfd, &i, 4);
+++++        // 4 là 4 byte (32 bits) là kích thước của một biến kiểu int
+++++    }
+++++}
+++++
+++++void
+++++child(int infd)
+++++{
+++++    int btr;
+++++    int n, prime;
+++++    int p[2];
+++++
+++++    // process first number
+++++    btr = read(infd, &n, 4); // lưu kết quả trả về từ hàm read
+++++    if (btr == 0)
+++++    {
+++++        return;
+++++    }
+++++    printf("prime %d\n", n);
+++++    prime = n;
+++++
+++++    // process the rest number
+++++    pipe(p);
+++++    if (fork() == 0) // tạo một quy trình con
+++++    {
+++++        close(p[1]);
+++++        // Đóng đầu ghi của ống trong quá trình con. Quá trình con chỉ đọc dữ liệu từ ống, không ghi vào ống này.
+++++        child(p[0]);
+++++        // Gọi lại hàm child đệ quy với đầu đọc của ống làm đầu vào. Quá trình con tiếp tục xử lý các số từ đầu vào (p[0]).
+++++        close(p[0]);
+++++        // Đóng đầu đọc của ống trong quá trình con
+++++        exit(0);
+++++    }
+++++
+++++    close(p[0]);
+++++    while (read(infd, &n, 4)) 
+++++    {
+++++        // Nếu n là số nguyên tố
+++++        if (n % prime == 0)
+++++        {
+++++            continue;
+++++        }
+++++        // ghi của ống p[1] để chuyển đến các quy trình con khác để tiếp tục xử lý
+++++        write(p[1], &n, 4);
+++++    }
+++++    close(p[1]); // Sau khi tất cả các số đã được xử lý, đầu ghi của ống p[1]
+++++    wait(0); // đợi cho đến khi tất cả các quy trình con kết thúc
+++++}
+++++
+++++int
+++++main(int argc, char *argv[])
+++++{
+++++    int p[2]; // parent => child
+++++    pipe(p);
+++++    // parent
+++++    if(fork()) 
+++++    {
+++++        close(p[0]);
+++++        parent(p[1], 35);
+++++        close(p[1]);
+++++        wait(0);
+++++    }
+++++    // child
+++++    else 
+++++    {
+++++        close(p[1]);
+++++        child(p[0]);
+++++        close(p[0]);
+++++        exit(0);
+++++    }
+++++    exit(0);
+++++}
++++\ No newline at end of file
++++diff --git a/user/sleep.c b/user/sleep.c
++++new file mode 100644
++++index 0000000..f5fb211
++++--- /dev/null
+++++++ b/user/sleep.c
++++@@ -0,0 +1,22 @@
+++++#include "kernel/types.h"
+++++#include "kernel/stat.h"
+++++#include "user/user.h"
+++++
+++++int 
+++++main(int argc, char* argv[]) // Điểm nhập của chương trình với đối số dòng lệnh
+++++{
+++++    // Kiểm tra xem số lượng đối số được cung cấp có khác 2 không
+++++    if (argc != 2) 
+++++    {
+++++        fprintf(2, "Usage: sleep + [time]\n");
+++++    }
+++++    int time = atoi(*++argv);
+++++    // Chuyển đổi biểu diễn chuỗi của thời gian thành số nguyên bằng cách sử dụng hàm atoi
+++++    // Tăng con trỏ argv để trỏ đến đối số tiếp theo (thời gian) và giải tham chiếu nó để lấy giá trị
+++++    // Lưu trữ giá trị thời gian đã chuyển đổi vào biến 'time'
+++++    if (sleep(time) != 0) 
+++++    {
+++++        fprintf(2, "Error in sleep sys_call!\n");
+++++    }
+++++    exit(0); // Thoát khỏi chương trình 0 (thực thi thành công)
+++++}
++++\ No newline at end of file
++++diff --git a/user/user.h b/user/user.h
++++index 4d398d5..f8d9740 100644
++++--- a/user/user.h
+++++++ b/user/user.h
++++@@ -1,4 +1,5 @@
++++ struct stat;
+++++struct sysinfo;
++++ 
++++ // system calls
++++ int fork(void);
++++@@ -22,6 +23,10 @@ int getpid(void);
++++ char* sbrk(int);
++++ int sleep(int);
++++ int uptime(void);
+++++// trace function
+++++int trace(int);
+++++// sys_info function
+++++int sysinfo(struct sysinfo *);
++++ 
++++ // ulib.c
++++ int stat(const char*, struct stat*);
++++diff --git a/user/usys.pl b/user/usys.pl
++++index 01e426e..353a1f8 100755
++++--- a/user/usys.pl
+++++++ b/user/usys.pl
++++@@ -36,3 +36,5 @@ entry("getpid");
++++ entry("sbrk");
++++ entry("sleep");
++++ entry("uptime");
+++++entry("trace");
+++++entry("sysinfo");
++++\ No newline at end of file
++++diff --git a/user/xargs.c b/user/xargs.c
++++new file mode 100644
++++index 0000000..1d1d496
++++--- /dev/null
+++++++ b/user/xargs.c
++++@@ -0,0 +1,49 @@
+++++#include "kernel/types.h"
+++++#include "kernel/stat.h"
+++++#include "user/user.h"
+++++#include "kernel/param.h"
+++++
+++++int main(int argc, char *argv[])
+++++{
+++++    char *args[MAXARG];
+++++    char line[512];
+++++    int i;
+++++
+++++    if(argc < 2){
+++++        fprintf(2, "Usage: xargs command ...\n");
+++++        exit(1);
+++++    }
+++++
+++++    // Check for -n option and shift arguments if found
+++++    if(argv[1][0] == '-' && argv[1][1] == 'n' && argv[1][2] == '\0') {
+++++        for(i = 0; i < argc-3; i++){
+++++            args[i] = argv[i+3];
+++++        }
+++++    } else {
+++++        for(i = 0; i < argc-1; i++){
+++++            args[i] = argv[i+1];
+++++        }
+++++    }
+++++
+++++    args[i] = line;
+++++    args[i+1] = 0;
+++++
+++++    while(1){
+++++        gets(line, sizeof(line));
+++++        if(line[0] == '\0') break;  // break the loop if gets returns an empty string
+++++
+++++        int len = strlen(line);
+++++        if (len > 0 && line[len - 1] == '\n') {
+++++            line[len - 1] = 0;  // replace newline with null
+++++        }
+++++
+++++        if(fork() == 0){
+++++            exec(args[0], args);
+++++            fprintf(2, "\n", args[0]);
+++++            exit(1);
+++++        }
+++++        wait(0);
+++++    }
+++++
+++++    exit(0);
+++++}
+++diff --git a/Makefile b/Makefile
+++index 365c91b..1eb11f5 100644
+++--- a/Makefile
++++++ b/Makefile
+++@@ -30,7 +30,8 @@ OBJS = \
+++   $K/sysfile.o \
+++   $K/kernelvec.o \
+++   $K/plic.o \
+++-  $K/virtio_disk.o
++++  $K/virtio_disk.o \
++++  $K/sysinfo.o \
+++ 
+++ OBJS_KCSAN = \
+++   $K/start.o \
+++@@ -172,6 +173,8 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
+++ .PRECIOUS: %.o
+++ 
+++ UPROGS=\
++++	$U/_trace\
++++	$U/_sysinfotest\
+++ 	$U/_cat\
+++ 	$U/_echo\
+++ 	$U/_forktest\
+++@@ -188,7 +191,11 @@ UPROGS=\
+++ 	$U/_grind\
+++ 	$U/_wc\
+++ 	$U/_zombie\
+++-
++++	$U/_sleep\
++++	$U/_pingpong\
++++	$U/_primes\
++++	$U/_find\
++++	$U/_xargs\
+++ 
+++ 
+++ 
+++diff --git a/answers-syscall.txt b/answers-syscall.txt
+++new file mode 100644
+++index 0000000..24c4069
+++--- /dev/null
++++++ b/answers-syscall.txt
+++@@ -0,0 +1,32 @@
++++1. Looking at the backtrace output, which function called syscall?
++++-> Syscall được gọi bởi usertrap, được thể hiện trong output của backtrace.
++++
++++2. What is the value of p->trapframe->a7 and what does that value represent? (Hint: look user/initcode.S, the first user program xv6 starts.)
++++-   Giá trị của p->trapframe->a7 bằng 7
++++-	Mở thư mục initcode.S trong user, ta thấy number syscall được lưu trong thanh ghi a7.
++++-	Trong trường hợp này, number syscall là 7. Mở file kernal/syscall.h để xem chi tiết. Số 7 đại dại cho SYS_exec.
++++
++++3. What was the previous mode that the CPU was in?
++++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, bit SPP chỉ ra cấp độ đặc quyền mà một hart đang thực thi trước khi vào chế độ giám sát. Khi một trap được thực hiện, SPP được thiết lập thành 0 nếu trap xuất phát từ chế độ người dùng, hoặc 1 nếu không. Khi một lệnh SRET (xem Mục 3.3.2) được thực thi để trở về từ trình xử lý trap, cấp độ đặc quyền được thiết lập tương ứng.
++++-	Như ta có thể thấy, giá trị của bit SPP là 0, điều này chỉ ra rằng cấp độ đặc quyền trước khi vào kernel để thực hiện cuộc gọi hệ thống là chế độ người dùng (user mode).
++++-	Tiếp theo, thực hiện thay thế câu lệnh num = p->trapframe->a7 bằng num = * (int *) 0 trong hàm syscall của kernel/syscall.c.
++++
++++4. Write down the assembly instruction the kernel is panicing at. Which register corresponds to the varialable num?
++++xv6 kernel is booting
++++
++++hart 2 starting
++++hart 1 starting
++++scause 0x000000000000000d
++++sepc=0x0000000080002052 stval=0x0000000000000000
++++panic: kerneltrap
++++
++++-	Sepc cho biết địa chỉ của mã nơi mà kernal đang gặp sự cố. Trong trường hợp này ta tìm kiếm địa chỉ 80002052 trong kernal/kernal.asm
++++-	Dựa vào đoạn code trên, có thể thấy chính sự thay đổi câu lệnh gây ra lỗi cho kernal. Tương đương cho câu lệnh lỗi này băng ngôn ngữ assembly là lw a3,0(zero) với num là s2.
++++
++++5. Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in scause above? (See description of scause in RISC-V privileged instructions)
++++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, giá trị 13 ở đây đại diện cho một lỗi trang tải. Cụ thể, một lỗi đã xảy ra trong khi tải dữ liệu từ địa chỉ bộ nhớ 0 vào s2. Có thể thấy từ sách giáo trình, địa chỉ 0 không ánh xạ vào không gian kernel; thay vào đó, nó bắt đầu tại địa chỉ ảo 0x80000000.
++++
++++6. What is the name of the binary that was running when the kernel paniced? What is its process id (pid)?
++++-    Thông tin này có thể được lấy bằng cách in ra trường 'name' của cấu trúc dữ liệu 'proc':
++++-    Có thể thấy rằng chương trình người dùng này là initcode, chính là quá trình đầu tiên trong xv6. In ra cấu trúc proc sẽ cho phép ta kiểm tra thêm thông tin về quá trình này.
++++-     Khi đó ta thấy pid của initcode là 1
+++\ No newline at end of file
+++diff --git a/command.txt b/command.txt
+++new file mode 100644
+++index 0000000..9c66511
+++--- /dev/null
++++++ b/command.txt
+++@@ -0,0 +1,12 @@
++++./grade-lab-syscall [syscall name]
++++
++++test trace:
++++$ trace 32 grep hello README
++++$ trace 2147483647 grep hello README
++++$ grep hello README
++++$ trace 2 usertests forkforkfork
++++
++++swtich  to syscall:
++++$ git fetch
++++$ git checkout syscall
++++$ make clean
+++\ No newline at end of file
+++diff --git a/kernel/defs.h b/kernel/defs.h
+++index a3c962b..3b4319a 100644
+++--- a/kernel/defs.h
++++++ b/kernel/defs.h
+++@@ -8,6 +8,7 @@ struct spinlock;
+++ struct sleeplock;
+++ struct stat;
+++ struct superblock;
++++struct sysinfo;
+++ 
+++ // bio.c
+++ void            binit(void);
+++@@ -16,6 +17,7 @@ void            brelse(struct buf*);
+++ void            bwrite(struct buf*);
+++ void            bpin(struct buf*);
+++ void            bunpin(struct buf*);
++++int             freemem(void);
+++ 
+++ // console.c
+++ void            consoleinit(void);
+++@@ -69,6 +71,7 @@ void            initlog(int, struct superblock*);
+++ void            log_write(struct buf*);
+++ void            begin_op(void);
+++ void            end_op(void);
++++int             nproc(void);
+++ 
+++ // pipe.c
+++ int             pipealloc(struct file**, struct file**);
+++@@ -110,6 +113,9 @@ void            procdump(void);
+++ // swtch.S
+++ void            swtch(struct context*, struct context*);
+++ 
++++// sysinfo.c
++++int             systeminfo(uint64);
++++
+++ // spinlock.c
+++ void            acquire(struct spinlock*);
+++ int             holding(struct spinlock*);
+++diff --git a/kernel/kalloc.c b/kernel/kalloc.c
+++index 0699e7e..0e149f1 100644
+++--- a/kernel/kalloc.c
++++++ b/kernel/kalloc.c
+++@@ -8,6 +8,8 @@
+++ #include "spinlock.h"
+++ #include "riscv.h"
+++ #include "defs.h"
++++#include "kernel/sleeplock.h"
++++#include "kernel/proc.h"
+++ 
+++ void freerange(void *pa_start, void *pa_end);
+++ 
+++@@ -80,3 +82,19 @@ kalloc(void)
+++     memset((char*)r, 5, PGSIZE); // fill with junk
+++   return (void*)r;
+++ }
++++
++++// Get the number of bytes of free memory
++++int
++++freemem(void)
++++{
++++  int n = 0;
++++  struct run *r;
++++  acquire(&kmem.lock);
++++  
++++  for (r = kmem.freelist; r; r = r->next)
++++    n++;
++++
++++  release(&kmem.lock);
++++
++++  return n * 4096;
++++}
+++\ No newline at end of file
+++diff --git a/kernel/proc.c b/kernel/proc.c
+++index 58a8a0b..71fc009 100644
+++--- a/kernel/proc.c
++++++ b/kernel/proc.c
+++@@ -10,6 +10,8 @@ struct cpu cpus[NCPU];
+++ 
+++ struct proc proc[NPROC];
+++ 
++++struct proc ptable[NPROC];
++++
+++ struct proc *initproc;
+++ 
+++ int nextpid = 1;
+++@@ -296,6 +298,9 @@ fork(void)
+++   }
+++   np->sz = p->sz;
+++ 
++++  // copy trace mask value
++++  np->mask = p->mask;
++++
+++   // copy saved user registers.
+++   *(np->trapframe) = *(p->trapframe);
+++ 
+++@@ -686,3 +691,19 @@ procdump(void)
+++     printf("\n");
+++   }
+++ }
++++
++++int
++++nproc(void)
++++{
++++  int n = 0;
++++  struct proc *p;
++++
++++  for(p = proc; p < &proc[NPROC]; p++) {
++++    acquire(&p->lock);
++++    if(p->state != UNUSED)
++++      n++;
++++    release(&p->lock);
++++  }
++++
++++  return n;
++++}
+++\ No newline at end of file
+++diff --git a/kernel/proc.h b/kernel/proc.h
+++index d021857..ac9816e 100644
+++--- a/kernel/proc.h
++++++ b/kernel/proc.h
+++@@ -85,6 +85,9 @@ enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
+++ struct proc {
+++   struct spinlock lock;
+++ 
++++  // trace mask value
++++  uint64 mask;                  
++++
+++   // p->lock must be held when using these:
+++   enum procstate state;        // Process state
+++   void *chan;                  // If non-zero, sleeping on chan
+++@@ -103,5 +106,5 @@ struct proc {
+++   struct context context;      // swtch() here to run process
+++   struct file *ofile[NOFILE];  // Open files
+++   struct inode *cwd;           // Current directory
+++-  char name[16];               // Process name (debugging)
++++  char name[16];               // Process name (debugging)    
+++ };
+++diff --git a/kernel/syscall.c b/kernel/syscall.c
+++index ed65409..444c841 100644
+++--- a/kernel/syscall.c
++++++ b/kernel/syscall.c
+++@@ -6,6 +6,7 @@
+++ #include "proc.h"
+++ #include "syscall.h"
+++ #include "defs.h"
++++#include "sysinfo.h"
+++ 
+++ // Fetch the uint64 at addr from the current process.
+++ int
+++@@ -101,6 +102,8 @@ extern uint64 sys_unlink(void);
+++ extern uint64 sys_link(void);
+++ extern uint64 sys_mkdir(void);
+++ extern uint64 sys_close(void);
++++extern uint64 sys_trace(void);
++++extern uint64 sys_sysinfo(void);
+++ 
+++ // An array mapping syscall numbers from syscall.h
+++ // to the function that handles the system call.
+++@@ -126,6 +129,34 @@ static uint64 (*syscalls[])(void) = {
+++ [SYS_link]    sys_link,
+++ [SYS_mkdir]   sys_mkdir,
+++ [SYS_close]   sys_close,
++++[SYS_trace]   sys_trace,
++++[SYS_sysinfo] sys_sysinfo,
++++};
++++
++++// the system call name index array
++++static char* syscalls_name[] = {
++++[SYS_fork]    "syscall fork",
++++[SYS_exit]    "syscall exit",
++++[SYS_wait]    "syscall wait",
++++[SYS_pipe]    "syscall pipe",
++++[SYS_read]    "syscall read",
++++[SYS_kill]    "syscall kill",
++++[SYS_exec]    "syscall exec",
++++[SYS_fstat]   "syscall fstat",
++++[SYS_chdir]   "syscall chdir",
++++[SYS_dup]     "syscall dup",
++++[SYS_getpid]  "syscall getpid",
++++[SYS_sbrk]    "syscall sbrk",
++++[SYS_sleep]   "syscall sleep",
++++[SYS_uptime]  "syscall uptime",
++++[SYS_open]    "syscall open",
++++[SYS_write]   "syscall write",
++++[SYS_mknod]   "syscall mknod",
++++[SYS_unlink]  "syscall unlink",
++++[SYS_link]    "syscall link",
++++[SYS_mkdir]   "syscall mkdir",
++++[SYS_close]   "syscall close",
++++[SYS_trace]   "syscall trace",
+++ };
+++ 
+++ void
+++@@ -138,7 +169,11 @@ syscall(void)
+++   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+++     // Use num to lookup the system call function for num, call it,
+++     // and store its return value in p->trapframe->a0
+++-    p->trapframe->a0 = syscalls[num]();
++++    uint64 a0 = syscalls[num]();
++++    if ((p->mask >> num) & 0b1) {
++++      printf("%d: %s -> %d\n", p->pid, syscalls_name[num], a0);
++++    }
++++    p->trapframe->a0 = a0;
+++   } else {
+++     printf("%d %s: unknown sys call %d\n",
+++             p->pid, p->name, num);
+++diff --git a/kernel/syscall.h b/kernel/syscall.h
+++index bc5f356..0dfedc7 100644
+++--- a/kernel/syscall.h
++++++ b/kernel/syscall.h
+++@@ -20,3 +20,5 @@
+++ #define SYS_link   19
+++ #define SYS_mkdir  20
+++ #define SYS_close  21
++++#define SYS_trace  22
++++#define SYS_sysinfo 23
+++diff --git a/kernel/sysfile.c b/kernel/sysfile.c
+++index 16b668c..7d79481 100644
+++--- a/kernel/sysfile.c
++++++ b/kernel/sysfile.c
+++@@ -15,6 +15,7 @@
+++ #include "sleeplock.h"
+++ #include "file.h"
+++ #include "fcntl.h"
++++#include "sysinfo.h"
+++ 
+++ // Fetch the nth word-sized system call argument as a file descriptor
+++ // and return both the descriptor and the corresponding struct file.
+++diff --git a/kernel/sysinfo.c b/kernel/sysinfo.c
+++new file mode 100644
+++index 0000000..09cdb35
+++--- /dev/null
++++++ b/kernel/sysinfo.c
+++@@ -0,0 +1,22 @@
++++#include "types.h"
++++#include "riscv.h"
++++#include "param.h"
++++#include "spinlock.h"
++++#include "defs.h"
++++#include "sysinfo.h"
++++#include "proc.h"
++++
++++// Get current system info
++++// addr is a user virtual address, pointing to a struct sysinfo.
++++int
++++systeminfo(uint64 addr) {
++++  struct proc *p = myproc();
++++  struct sysinfo info;
++++
++++  info.freemem = freemem();
++++  info.nproc = nproc();
++++
++++  if(copyout(p->pagetable, addr, (char *)&info, sizeof(info)) < 0)
++++    return -1;
++++  return 0;
++++}
+++\ No newline at end of file
+++diff --git a/kernel/sysproc.c b/kernel/sysproc.c
+++index 3b4d5bd..79fd2a5 100644
+++--- a/kernel/sysproc.c
++++++ b/kernel/sysproc.c
+++@@ -5,6 +5,7 @@
+++ #include "memlayout.h"
+++ #include "spinlock.h"
+++ #include "proc.h"
++++#include "sysinfo.h"
+++ 
+++ uint64
+++ sys_exit(void)
+++@@ -91,3 +92,24 @@ sys_uptime(void)
+++   release(&tickslock);
+++   return xticks;
+++ }
++++
++++//sys_trace
++++uint64
++++sys_trace(void)
++++{
++++  int mask;
++++
++++  argint(0, &mask);
++++  struct proc *p = myproc();
++++  p->mask = mask;
++++  return 0;
++++}
++++
++++//sys_info
++++uint64
++++sys_sysinfo(void)
++++{
++++  uint64 info;
++++  argaddr(0, &info);
++++  return systeminfo(info);
++++}
+++\ No newline at end of file
+++diff --git a/time.txt b/time.txt
+++new file mode 100644
+++index 0000000..c5b431b
+++--- /dev/null
++++++ b/time.txt
+++@@ -0,0 +1 @@
++++50
+++\ No newline at end of file
+++diff --git a/user/find.c b/user/find.c
+++new file mode 100644
+++index 0000000..c321a9a
+++--- /dev/null
++++++ b/user/find.c
+++@@ -0,0 +1,154 @@
++++#include "kernel/types.h"
++++#include "kernel/stat.h"
++++#include "kernel/fs.h"
++++#include "user/user.h"
++++
++++
++++/*
++++ * Function to remove trailing white spaces from a string
++++ * Parameters:
++++ *   - path: The string to be trimmed
++++ * Returns:
++++ *   - A pointer to the modified string
++++ */
++++char* 
++++rtrim(char* path)
++++{
++++    static char newStr[DIRSIZ+1];  // Static buffer to hold the modified string
++++    int whiteSpaceSize = 0;         // Variable to store the size of trailing white spaces
++++    int bufSize = 0;                // Variable to store the size of the resulting string
++++    
++++    // Loop through the string from the end to find the trailing white spaces
++++    for(char* p = path + strlen(path) - 1; p >= path && *p == ' '; --p) 
++++    {
++++        ++whiteSpaceSize;  // Counting the trailing white spaces
++++    }
++++    
++++    // Calculate the size of the resulting string after trimming white spaces
++++    bufSize = DIRSIZ - whiteSpaceSize;
++++    
++++    // Copy non-white space characters from the original string to the new string buffer
++++    memmove(newStr, path, bufSize);
++++    
++++    // Null-terminate the new string
++++    newStr[bufSize] = '\0';
++++    
++++    // Return the modified string
++++    return newStr;
++++}
++++
++++/*
++++ * Recursive function to find a file in a directory and its subdirectories
++++ * Parameters:
++++ *   - path: The directory path to search
++++ *   - name: The name of the file to find
++++ */
++++void 
++++find(char* path, char* name)
++++{
++++    char buf[512], *p;              // Buffer to hold file paths, pointer for manipulation
++++    int fd;                         // File descriptor for directory
++++    struct dirent de;               // Directory entry structure
++++    struct stat st;                 // File status structure
++++    
++++    // Open the directory specified by the path
++++    if ((fd = open(path, 0)) < 0) 
++++    {
++++        fprintf(2, "find: cannot open %s\n", path);
++++        return;
++++    }
++++
++++    // Get file status of the directory
++++    if (fstat(fd, &st) == -1) 
++++    {
++++        fprintf(2, "find: cannot fstat %s\n", path);
++++        close(fd);
++++        return;
++++    }
++++
++++    // Switch statement to handle different types of files/directories
++++    switch (st.type) 
++++    {
++++
++++        case T_DEVICE:
++++        case T_FILE:
++++            fprintf(2, "find: %s not a path value.\n", path);
++++            close(fd);
++++            // printf("==='%s' is a File\n", path);
++++            break;
++++        case T_DIR:
++++            // Check if the path length exceeds the buffer size
++++            if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf)
++++            {
++++                printf("ls: path too long\n");
++++                break;
++++            }
++++            
++++            // Create the full path by copying the original path
++++            strcpy(buf, path);
++++            p = buf + strlen(buf);
++++            *p++ = '/';
++++            
++++            // Read directory information for files and subdirectories
++++            while (read(fd, &de, sizeof(de)) == sizeof de) 
++++            {
++++                if (de.inum == 0)
++++                    continue;
++++                
++++                // Skip the current directory (.) and parent directory (..)
++++                if (strcmp(".", rtrim(de.name)) == 0 || strcmp("..", rtrim(de.name)) == 0)
++++                    continue;
++++                
++++                // Append the file/subdirectory name to the path
++++                memmove(p, de.name, DIRSIZ);
++++                
++++                // Null-terminate the path
++++                p[DIRSIZ] = '\0';
++++                
++++                // Get the file status of the current file/subdirectory
++++                if (stat(buf, &st) == -1) 
++++                {
++++                    fprintf(2, "find: cannot stat '%s'\n", buf);
++++                    continue;
++++                }
++++                
++++                // Print the full path if the file name matches the search name
++++                if (st.type == T_DEVICE || st.type == T_FILE) 
++++                {
++++                    if (strcmp(name, rtrim(de.name)) == 0) 
++++                    {
++++                        printf("%s\n", buf);
++++                        /*for (int i = 0; buf[i] != '\0'; ++i) 
++++                        {
++++                            printf("'%d'\n", buf[i]);
++++                        }*/
++++
++++                    }
++++                }
++++                // Recursively search if the entry is a directory
++++                else if (st.type == T_DIR) 
++++                {
++++                    find(buf, name);
++++                }
++++            }
++++    }
++++}
++++
++++int 
++++main(int argc, char* argv[])
++++{
++++    // Check if the number of command-line arguments is correct
++++    if (argc != 3) 
++++    {
++++        fprintf(2, "Usage: find path file.\n");
++++        exit(0);
++++    }
++++    
++++    char* path = argv[1];  // Extract the path from command-line arguments
++++    char* name = argv[2];  // Extract the file name to search from command-line arguments
++++    
++++    // Call the find function to search for the file
++++    find(path, name);
++++    
++++    exit(0);
++++}
+++\ No newline at end of file
+++diff --git a/user/pingpong.c b/user/pingpong.c
+++new file mode 100644
+++index 0000000..cee7013
+++--- /dev/null
++++++ b/user/pingpong.c
+++@@ -0,0 +1,55 @@
++++#include "kernel/types.h"
++++#include "kernel/stat.h"
++++#include "user/user.h"
++++
++++int main()
++++{
++++    int p2c[2], c2p[2];
++++    int child_id;
++++    char* ping = "ping";
++++    char* pong = "pong";
++++    char buf[512] = {0};
++++
++++    // Create pipes
++++    if (pipe(p2c) == -1 || pipe(c2p) == -1) 
++++    {
++++        fprintf(2, "Error: pipe creation error.\n");
++++        exit(1);
++++    }
++++
++++    child_id = fork();
++++    if (child_id < 0) 
++++    {
++++        fprintf(2, "Error: fork failed.\n");
++++        exit(1);
++++    }
++++
++++    if(child_id != 0)
++++    {
++++        // parent process
++++        close(p2c[0]); // close read only write
++++        close(c2p[1]); // close write only read
++++
++++        // write ping to the child process (p2c)
++++        write(p2c[1], ping, strlen(ping));
++++
++++        // after write then read from the child process (c2p)
++++        read(c2p[0], buf, sizeof(buf));
++++        printf("%d: received %s\n", getpid(), buf);
++++        exit(0);
++++    }
++++    else
++++    {
++++        // child process
++++        close(p2c[1]); // close write only read
++++        close(c2p[0]); // close read only write
++++
++++        // read from the parent process
++++        read(p2c[0], buf, sizeof(buf));
++++        printf("%d: received %s\n", getpid(), buf);
++++
++++        // write to the parent process
++++        write(c2p[1], pong, strlen(pong));
++++        exit(0);
++++    }
++++}
+++diff --git a/user/primes.c b/user/primes.c
+++new file mode 100644
+++index 0000000..b4f4b31
+++--- /dev/null
++++++ b/user/primes.c
+++@@ -0,0 +1,82 @@
++++#include "kernel/types.h"
++++#include "user/user.h"
++++
++++// Dùng sàng Eratosthenes
++++void
++++parent(int outfd, int maxn)
++++{   
++++    // Đầu ra là outfd (file description)
++++    for (int i = 2; i <= maxn; ++i)
++++    {
++++        write(outfd, &i, 4);
++++        // 4 là 4 byte (32 bits) là kích thước của một biến kiểu int
++++    }
++++}
++++
++++void
++++child(int infd)
++++{
++++    int btr;
++++    int n, prime;
++++    int p[2];
++++
++++    // process first number
++++    btr = read(infd, &n, 4); // lưu kết quả trả về từ hàm read
++++    if (btr == 0)
++++    {
++++        return;
++++    }
++++    printf("prime %d\n", n);
++++    prime = n;
++++
++++    // process the rest number
++++    pipe(p);
++++    if (fork() == 0) // tạo một quy trình con
++++    {
++++        close(p[1]);
++++        // Đóng đầu ghi của ống trong quá trình con. Quá trình con chỉ đọc dữ liệu từ ống, không ghi vào ống này.
++++        child(p[0]);
++++        // Gọi lại hàm child đệ quy với đầu đọc của ống làm đầu vào. Quá trình con tiếp tục xử lý các số từ đầu vào (p[0]).
++++        close(p[0]);
++++        // Đóng đầu đọc của ống trong quá trình con
++++        exit(0);
++++    }
++++
++++    close(p[0]);
++++    while (read(infd, &n, 4)) 
++++    {
++++        // Nếu n là số nguyên tố
++++        if (n % prime == 0)
++++        {
++++            continue;
++++        }
++++        // ghi của ống p[1] để chuyển đến các quy trình con khác để tiếp tục xử lý
++++        write(p[1], &n, 4);
++++    }
++++    close(p[1]); // Sau khi tất cả các số đã được xử lý, đầu ghi của ống p[1]
++++    wait(0); // đợi cho đến khi tất cả các quy trình con kết thúc
++++}
++++
++++int
++++main(int argc, char *argv[])
++++{
++++    int p[2]; // parent => child
++++    pipe(p);
++++    // parent
++++    if(fork()) 
++++    {
++++        close(p[0]);
++++        parent(p[1], 35);
++++        close(p[1]);
++++        wait(0);
++++    }
++++    // child
++++    else 
++++    {
++++        close(p[1]);
++++        child(p[0]);
++++        close(p[0]);
++++        exit(0);
++++    }
++++    exit(0);
++++}
+++\ No newline at end of file
+++diff --git a/user/sleep.c b/user/sleep.c
+++new file mode 100644
+++index 0000000..f5fb211
+++--- /dev/null
++++++ b/user/sleep.c
+++@@ -0,0 +1,22 @@
++++#include "kernel/types.h"
++++#include "kernel/stat.h"
++++#include "user/user.h"
++++
++++int 
++++main(int argc, char* argv[]) // Điểm nhập của chương trình với đối số dòng lệnh
++++{
++++    // Kiểm tra xem số lượng đối số được cung cấp có khác 2 không
++++    if (argc != 2) 
++++    {
++++        fprintf(2, "Usage: sleep + [time]\n");
++++    }
++++    int time = atoi(*++argv);
++++    // Chuyển đổi biểu diễn chuỗi của thời gian thành số nguyên bằng cách sử dụng hàm atoi
++++    // Tăng con trỏ argv để trỏ đến đối số tiếp theo (thời gian) và giải tham chiếu nó để lấy giá trị
++++    // Lưu trữ giá trị thời gian đã chuyển đổi vào biến 'time'
++++    if (sleep(time) != 0) 
++++    {
++++        fprintf(2, "Error in sleep sys_call!\n");
++++    }
++++    exit(0); // Thoát khỏi chương trình 0 (thực thi thành công)
++++}
+++\ No newline at end of file
+++diff --git a/user/user.h b/user/user.h
+++index 4d398d5..f8d9740 100644
+++--- a/user/user.h
++++++ b/user/user.h
+++@@ -1,4 +1,5 @@
+++ struct stat;
++++struct sysinfo;
+++ 
+++ // system calls
+++ int fork(void);
+++@@ -22,6 +23,10 @@ int getpid(void);
+++ char* sbrk(int);
+++ int sleep(int);
+++ int uptime(void);
++++// trace function
++++int trace(int);
++++// sys_info function
++++int sysinfo(struct sysinfo *);
+++ 
+++ // ulib.c
+++ int stat(const char*, struct stat*);
+++diff --git a/user/usys.pl b/user/usys.pl
+++index 01e426e..353a1f8 100755
+++--- a/user/usys.pl
++++++ b/user/usys.pl
+++@@ -36,3 +36,5 @@ entry("getpid");
+++ entry("sbrk");
+++ entry("sleep");
+++ entry("uptime");
++++entry("trace");
++++entry("sysinfo");
+++\ No newline at end of file
+++diff --git a/user/xargs.c b/user/xargs.c
+++new file mode 100644
+++index 0000000..1d1d496
+++--- /dev/null
++++++ b/user/xargs.c
+++@@ -0,0 +1,49 @@
++++#include "kernel/types.h"
++++#include "kernel/stat.h"
++++#include "user/user.h"
++++#include "kernel/param.h"
++++
++++int main(int argc, char *argv[])
++++{
++++    char *args[MAXARG];
++++    char line[512];
++++    int i;
++++
++++    if(argc < 2){
++++        fprintf(2, "Usage: xargs command ...\n");
++++        exit(1);
++++    }
++++
++++    // Check for -n option and shift arguments if found
++++    if(argv[1][0] == '-' && argv[1][1] == 'n' && argv[1][2] == '\0') {
++++        for(i = 0; i < argc-3; i++){
++++            args[i] = argv[i+3];
++++        }
++++    } else {
++++        for(i = 0; i < argc-1; i++){
++++            args[i] = argv[i+1];
++++        }
++++    }
++++
++++    args[i] = line;
++++    args[i+1] = 0;
++++
++++    while(1){
++++        gets(line, sizeof(line));
++++        if(line[0] == '\0') break;  // break the loop if gets returns an empty string
++++
++++        int len = strlen(line);
++++        if (len > 0 && line[len - 1] == '\n') {
++++            line[len - 1] = 0;  // replace newline with null
++++        }
++++
++++        if(fork() == 0){
++++            exec(args[0], args);
++++            fprintf(2, "\n", args[0]);
++++            exit(1);
++++        }
++++        wait(0);
++++    }
++++
++++    exit(0);
++++}
++diff --git a/Makefile b/Makefile
++index 365c91b..1eb11f5 100644
++--- a/Makefile
+++++ b/Makefile
++@@ -30,7 +30,8 @@ OBJS = \
++   $K/sysfile.o \
++   $K/kernelvec.o \
++   $K/plic.o \
++-  $K/virtio_disk.o
+++  $K/virtio_disk.o \
+++  $K/sysinfo.o \
++ 
++ OBJS_KCSAN = \
++   $K/start.o \
++@@ -172,6 +173,8 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
++ .PRECIOUS: %.o
++ 
++ UPROGS=\
+++	$U/_trace\
+++	$U/_sysinfotest\
++ 	$U/_cat\
++ 	$U/_echo\
++ 	$U/_forktest\
++@@ -188,7 +191,11 @@ UPROGS=\
++ 	$U/_grind\
++ 	$U/_wc\
++ 	$U/_zombie\
++-
+++	$U/_sleep\
+++	$U/_pingpong\
+++	$U/_primes\
+++	$U/_find\
+++	$U/_xargs\
++ 
++ 
++ 
++diff --git a/answers-syscall.txt b/answers-syscall.txt
++new file mode 100644
++index 0000000..24c4069
++--- /dev/null
+++++ b/answers-syscall.txt
++@@ -0,0 +1,32 @@
+++1. Looking at the backtrace output, which function called syscall?
+++-> Syscall được gọi bởi usertrap, được thể hiện trong output của backtrace.
+++
+++2. What is the value of p->trapframe->a7 and what does that value represent? (Hint: look user/initcode.S, the first user program xv6 starts.)
+++-   Giá trị của p->trapframe->a7 bằng 7
+++-	Mở thư mục initcode.S trong user, ta thấy number syscall được lưu trong thanh ghi a7.
+++-	Trong trường hợp này, number syscall là 7. Mở file kernal/syscall.h để xem chi tiết. Số 7 đại dại cho SYS_exec.
+++
+++3. What was the previous mode that the CPU was in?
+++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, bit SPP chỉ ra cấp độ đặc quyền mà một hart đang thực thi trước khi vào chế độ giám sát. Khi một trap được thực hiện, SPP được thiết lập thành 0 nếu trap xuất phát từ chế độ người dùng, hoặc 1 nếu không. Khi một lệnh SRET (xem Mục 3.3.2) được thực thi để trở về từ trình xử lý trap, cấp độ đặc quyền được thiết lập tương ứng.
+++-	Như ta có thể thấy, giá trị của bit SPP là 0, điều này chỉ ra rằng cấp độ đặc quyền trước khi vào kernel để thực hiện cuộc gọi hệ thống là chế độ người dùng (user mode).
+++-	Tiếp theo, thực hiện thay thế câu lệnh num = p->trapframe->a7 bằng num = * (int *) 0 trong hàm syscall của kernel/syscall.c.
+++
+++4. Write down the assembly instruction the kernel is panicing at. Which register corresponds to the varialable num?
+++xv6 kernel is booting
+++
+++hart 2 starting
+++hart 1 starting
+++scause 0x000000000000000d
+++sepc=0x0000000080002052 stval=0x0000000000000000
+++panic: kerneltrap
+++
+++-	Sepc cho biết địa chỉ của mã nơi mà kernal đang gặp sự cố. Trong trường hợp này ta tìm kiếm địa chỉ 80002052 trong kernal/kernal.asm
+++-	Dựa vào đoạn code trên, có thể thấy chính sự thay đổi câu lệnh gây ra lỗi cho kernal. Tương đương cho câu lệnh lỗi này băng ngôn ngữ assembly là lw a3,0(zero) với num là s2.
+++
+++5. Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in scause above? (See description of scause in RISC-V privileged instructions)
+++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, giá trị 13 ở đây đại diện cho một lỗi trang tải. Cụ thể, một lỗi đã xảy ra trong khi tải dữ liệu từ địa chỉ bộ nhớ 0 vào s2. Có thể thấy từ sách giáo trình, địa chỉ 0 không ánh xạ vào không gian kernel; thay vào đó, nó bắt đầu tại địa chỉ ảo 0x80000000.
+++
+++6. What is the name of the binary that was running when the kernel paniced? What is its process id (pid)?
+++-    Thông tin này có thể được lấy bằng cách in ra trường 'name' của cấu trúc dữ liệu 'proc':
+++-    Có thể thấy rằng chương trình người dùng này là initcode, chính là quá trình đầu tiên trong xv6. In ra cấu trúc proc sẽ cho phép ta kiểm tra thêm thông tin về quá trình này.
+++-     Khi đó ta thấy pid của initcode là 1
++\ No newline at end of file
++diff --git a/command.txt b/command.txt
++new file mode 100644
++index 0000000..9c66511
++--- /dev/null
+++++ b/command.txt
++@@ -0,0 +1,12 @@
+++./grade-lab-syscall [syscall name]
+++
+++test trace:
+++$ trace 32 grep hello README
+++$ trace 2147483647 grep hello README
+++$ grep hello README
+++$ trace 2 usertests forkforkfork
+++
+++swtich  to syscall:
+++$ git fetch
+++$ git checkout syscall
+++$ make clean
++\ No newline at end of file
++diff --git a/kernel/defs.h b/kernel/defs.h
++index a3c962b..3b4319a 100644
++--- a/kernel/defs.h
+++++ b/kernel/defs.h
++@@ -8,6 +8,7 @@ struct spinlock;
++ struct sleeplock;
++ struct stat;
++ struct superblock;
+++struct sysinfo;
++ 
++ // bio.c
++ void            binit(void);
++@@ -16,6 +17,7 @@ void            brelse(struct buf*);
++ void            bwrite(struct buf*);
++ void            bpin(struct buf*);
++ void            bunpin(struct buf*);
+++int             freemem(void);
++ 
++ // console.c
++ void            consoleinit(void);
++@@ -69,6 +71,7 @@ void            initlog(int, struct superblock*);
++ void            log_write(struct buf*);
++ void            begin_op(void);
++ void            end_op(void);
+++int             nproc(void);
++ 
++ // pipe.c
++ int             pipealloc(struct file**, struct file**);
++@@ -110,6 +113,9 @@ void            procdump(void);
++ // swtch.S
++ void            swtch(struct context*, struct context*);
++ 
+++// sysinfo.c
+++int             systeminfo(uint64);
+++
++ // spinlock.c
++ void            acquire(struct spinlock*);
++ int             holding(struct spinlock*);
++diff --git a/kernel/kalloc.c b/kernel/kalloc.c
++index 0699e7e..0e149f1 100644
++--- a/kernel/kalloc.c
+++++ b/kernel/kalloc.c
++@@ -8,6 +8,8 @@
++ #include "spinlock.h"
++ #include "riscv.h"
++ #include "defs.h"
+++#include "kernel/sleeplock.h"
+++#include "kernel/proc.h"
++ 
++ void freerange(void *pa_start, void *pa_end);
++ 
++@@ -80,3 +82,19 @@ kalloc(void)
++     memset((char*)r, 5, PGSIZE); // fill with junk
++   return (void*)r;
++ }
+++
+++// Get the number of bytes of free memory
+++int
+++freemem(void)
+++{
+++  int n = 0;
+++  struct run *r;
+++  acquire(&kmem.lock);
+++  
+++  for (r = kmem.freelist; r; r = r->next)
+++    n++;
+++
+++  release(&kmem.lock);
+++
+++  return n * 4096;
+++}
++\ No newline at end of file
++diff --git a/kernel/proc.c b/kernel/proc.c
++index 58a8a0b..71fc009 100644
++--- a/kernel/proc.c
+++++ b/kernel/proc.c
++@@ -10,6 +10,8 @@ struct cpu cpus[NCPU];
++ 
++ struct proc proc[NPROC];
++ 
+++struct proc ptable[NPROC];
+++
++ struct proc *initproc;
++ 
++ int nextpid = 1;
++@@ -296,6 +298,9 @@ fork(void)
++   }
++   np->sz = p->sz;
++ 
+++  // copy trace mask value
+++  np->mask = p->mask;
+++
++   // copy saved user registers.
++   *(np->trapframe) = *(p->trapframe);
++ 
++@@ -686,3 +691,19 @@ procdump(void)
++     printf("\n");
++   }
++ }
+++
+++int
+++nproc(void)
+++{
+++  int n = 0;
+++  struct proc *p;
+++
+++  for(p = proc; p < &proc[NPROC]; p++) {
+++    acquire(&p->lock);
+++    if(p->state != UNUSED)
+++      n++;
+++    release(&p->lock);
+++  }
+++
+++  return n;
+++}
++\ No newline at end of file
++diff --git a/kernel/proc.h b/kernel/proc.h
++index d021857..ac9816e 100644
++--- a/kernel/proc.h
+++++ b/kernel/proc.h
++@@ -85,6 +85,9 @@ enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
++ struct proc {
++   struct spinlock lock;
++ 
+++  // trace mask value
+++  uint64 mask;                  
+++
++   // p->lock must be held when using these:
++   enum procstate state;        // Process state
++   void *chan;                  // If non-zero, sleeping on chan
++@@ -103,5 +106,5 @@ struct proc {
++   struct context context;      // swtch() here to run process
++   struct file *ofile[NOFILE];  // Open files
++   struct inode *cwd;           // Current directory
++-  char name[16];               // Process name (debugging)
+++  char name[16];               // Process name (debugging)    
++ };
++diff --git a/kernel/syscall.c b/kernel/syscall.c
++index ed65409..444c841 100644
++--- a/kernel/syscall.c
+++++ b/kernel/syscall.c
++@@ -6,6 +6,7 @@
++ #include "proc.h"
++ #include "syscall.h"
++ #include "defs.h"
+++#include "sysinfo.h"
++ 
++ // Fetch the uint64 at addr from the current process.
++ int
++@@ -101,6 +102,8 @@ extern uint64 sys_unlink(void);
++ extern uint64 sys_link(void);
++ extern uint64 sys_mkdir(void);
++ extern uint64 sys_close(void);
+++extern uint64 sys_trace(void);
+++extern uint64 sys_sysinfo(void);
++ 
++ // An array mapping syscall numbers from syscall.h
++ // to the function that handles the system call.
++@@ -126,6 +129,34 @@ static uint64 (*syscalls[])(void) = {
++ [SYS_link]    sys_link,
++ [SYS_mkdir]   sys_mkdir,
++ [SYS_close]   sys_close,
+++[SYS_trace]   sys_trace,
+++[SYS_sysinfo] sys_sysinfo,
+++};
+++
+++// the system call name index array
+++static char* syscalls_name[] = {
+++[SYS_fork]    "syscall fork",
+++[SYS_exit]    "syscall exit",
+++[SYS_wait]    "syscall wait",
+++[SYS_pipe]    "syscall pipe",
+++[SYS_read]    "syscall read",
+++[SYS_kill]    "syscall kill",
+++[SYS_exec]    "syscall exec",
+++[SYS_fstat]   "syscall fstat",
+++[SYS_chdir]   "syscall chdir",
+++[SYS_dup]     "syscall dup",
+++[SYS_getpid]  "syscall getpid",
+++[SYS_sbrk]    "syscall sbrk",
+++[SYS_sleep]   "syscall sleep",
+++[SYS_uptime]  "syscall uptime",
+++[SYS_open]    "syscall open",
+++[SYS_write]   "syscall write",
+++[SYS_mknod]   "syscall mknod",
+++[SYS_unlink]  "syscall unlink",
+++[SYS_link]    "syscall link",
+++[SYS_mkdir]   "syscall mkdir",
+++[SYS_close]   "syscall close",
+++[SYS_trace]   "syscall trace",
++ };
++ 
++ void
++@@ -138,7 +169,11 @@ syscall(void)
++   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
++     // Use num to lookup the system call function for num, call it,
++     // and store its return value in p->trapframe->a0
++-    p->trapframe->a0 = syscalls[num]();
+++    uint64 a0 = syscalls[num]();
+++    if ((p->mask >> num) & 0b1) {
+++      printf("%d: %s -> %d\n", p->pid, syscalls_name[num], a0);
+++    }
+++    p->trapframe->a0 = a0;
++   } else {
++     printf("%d %s: unknown sys call %d\n",
++             p->pid, p->name, num);
++diff --git a/kernel/syscall.h b/kernel/syscall.h
++index bc5f356..0dfedc7 100644
++--- a/kernel/syscall.h
+++++ b/kernel/syscall.h
++@@ -20,3 +20,5 @@
++ #define SYS_link   19
++ #define SYS_mkdir  20
++ #define SYS_close  21
+++#define SYS_trace  22
+++#define SYS_sysinfo 23
++diff --git a/kernel/sysfile.c b/kernel/sysfile.c
++index 16b668c..7d79481 100644
++--- a/kernel/sysfile.c
+++++ b/kernel/sysfile.c
++@@ -15,6 +15,7 @@
++ #include "sleeplock.h"
++ #include "file.h"
++ #include "fcntl.h"
+++#include "sysinfo.h"
++ 
++ // Fetch the nth word-sized system call argument as a file descriptor
++ // and return both the descriptor and the corresponding struct file.
++diff --git a/kernel/sysinfo.c b/kernel/sysinfo.c
++new file mode 100644
++index 0000000..09cdb35
++--- /dev/null
+++++ b/kernel/sysinfo.c
++@@ -0,0 +1,22 @@
+++#include "types.h"
+++#include "riscv.h"
+++#include "param.h"
+++#include "spinlock.h"
+++#include "defs.h"
+++#include "sysinfo.h"
+++#include "proc.h"
+++
+++// Get current system info
+++// addr is a user virtual address, pointing to a struct sysinfo.
+++int
+++systeminfo(uint64 addr) {
+++  struct proc *p = myproc();
+++  struct sysinfo info;
+++
+++  info.freemem = freemem();
+++  info.nproc = nproc();
+++
+++  if(copyout(p->pagetable, addr, (char *)&info, sizeof(info)) < 0)
+++    return -1;
+++  return 0;
+++}
++\ No newline at end of file
++diff --git a/kernel/sysproc.c b/kernel/sysproc.c
++index 3b4d5bd..79fd2a5 100644
++--- a/kernel/sysproc.c
+++++ b/kernel/sysproc.c
++@@ -5,6 +5,7 @@
++ #include "memlayout.h"
++ #include "spinlock.h"
++ #include "proc.h"
+++#include "sysinfo.h"
++ 
++ uint64
++ sys_exit(void)
++@@ -91,3 +92,24 @@ sys_uptime(void)
++   release(&tickslock);
++   return xticks;
++ }
+++
+++//sys_trace
+++uint64
+++sys_trace(void)
+++{
+++  int mask;
+++
+++  argint(0, &mask);
+++  struct proc *p = myproc();
+++  p->mask = mask;
+++  return 0;
+++}
+++
+++//sys_info
+++uint64
+++sys_sysinfo(void)
+++{
+++  uint64 info;
+++  argaddr(0, &info);
+++  return systeminfo(info);
+++}
++\ No newline at end of file
++diff --git a/time.txt b/time.txt
++new file mode 100644
++index 0000000..c5b431b
++--- /dev/null
+++++ b/time.txt
++@@ -0,0 +1 @@
+++50
++\ No newline at end of file
++diff --git a/user/find.c b/user/find.c
++new file mode 100644
++index 0000000..c321a9a
++--- /dev/null
+++++ b/user/find.c
++@@ -0,0 +1,154 @@
+++#include "kernel/types.h"
+++#include "kernel/stat.h"
+++#include "kernel/fs.h"
+++#include "user/user.h"
+++
+++
+++/*
+++ * Function to remove trailing white spaces from a string
+++ * Parameters:
+++ *   - path: The string to be trimmed
+++ * Returns:
+++ *   - A pointer to the modified string
+++ */
+++char* 
+++rtrim(char* path)
+++{
+++    static char newStr[DIRSIZ+1];  // Static buffer to hold the modified string
+++    int whiteSpaceSize = 0;         // Variable to store the size of trailing white spaces
+++    int bufSize = 0;                // Variable to store the size of the resulting string
+++    
+++    // Loop through the string from the end to find the trailing white spaces
+++    for(char* p = path + strlen(path) - 1; p >= path && *p == ' '; --p) 
+++    {
+++        ++whiteSpaceSize;  // Counting the trailing white spaces
+++    }
+++    
+++    // Calculate the size of the resulting string after trimming white spaces
+++    bufSize = DIRSIZ - whiteSpaceSize;
+++    
+++    // Copy non-white space characters from the original string to the new string buffer
+++    memmove(newStr, path, bufSize);
+++    
+++    // Null-terminate the new string
+++    newStr[bufSize] = '\0';
+++    
+++    // Return the modified string
+++    return newStr;
+++}
+++
+++/*
+++ * Recursive function to find a file in a directory and its subdirectories
+++ * Parameters:
+++ *   - path: The directory path to search
+++ *   - name: The name of the file to find
+++ */
+++void 
+++find(char* path, char* name)
+++{
+++    char buf[512], *p;              // Buffer to hold file paths, pointer for manipulation
+++    int fd;                         // File descriptor for directory
+++    struct dirent de;               // Directory entry structure
+++    struct stat st;                 // File status structure
+++    
+++    // Open the directory specified by the path
+++    if ((fd = open(path, 0)) < 0) 
+++    {
+++        fprintf(2, "find: cannot open %s\n", path);
+++        return;
+++    }
+++
+++    // Get file status of the directory
+++    if (fstat(fd, &st) == -1) 
+++    {
+++        fprintf(2, "find: cannot fstat %s\n", path);
+++        close(fd);
+++        return;
+++    }
+++
+++    // Switch statement to handle different types of files/directories
+++    switch (st.type) 
+++    {
+++
+++        case T_DEVICE:
+++        case T_FILE:
+++            fprintf(2, "find: %s not a path value.\n", path);
+++            close(fd);
+++            // printf("==='%s' is a File\n", path);
+++            break;
+++        case T_DIR:
+++            // Check if the path length exceeds the buffer size
+++            if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf)
+++            {
+++                printf("ls: path too long\n");
+++                break;
+++            }
+++            
+++            // Create the full path by copying the original path
+++            strcpy(buf, path);
+++            p = buf + strlen(buf);
+++            *p++ = '/';
+++            
+++            // Read directory information for files and subdirectories
+++            while (read(fd, &de, sizeof(de)) == sizeof de) 
+++            {
+++                if (de.inum == 0)
+++                    continue;
+++                
+++                // Skip the current directory (.) and parent directory (..)
+++                if (strcmp(".", rtrim(de.name)) == 0 || strcmp("..", rtrim(de.name)) == 0)
+++                    continue;
+++                
+++                // Append the file/subdirectory name to the path
+++                memmove(p, de.name, DIRSIZ);
+++                
+++                // Null-terminate the path
+++                p[DIRSIZ] = '\0';
+++                
+++                // Get the file status of the current file/subdirectory
+++                if (stat(buf, &st) == -1) 
+++                {
+++                    fprintf(2, "find: cannot stat '%s'\n", buf);
+++                    continue;
+++                }
+++                
+++                // Print the full path if the file name matches the search name
+++                if (st.type == T_DEVICE || st.type == T_FILE) 
+++                {
+++                    if (strcmp(name, rtrim(de.name)) == 0) 
+++                    {
+++                        printf("%s\n", buf);
+++                        /*for (int i = 0; buf[i] != '\0'; ++i) 
+++                        {
+++                            printf("'%d'\n", buf[i]);
+++                        }*/
+++
+++                    }
+++                }
+++                // Recursively search if the entry is a directory
+++                else if (st.type == T_DIR) 
+++                {
+++                    find(buf, name);
+++                }
+++            }
+++    }
+++}
+++
+++int 
+++main(int argc, char* argv[])
+++{
+++    // Check if the number of command-line arguments is correct
+++    if (argc != 3) 
+++    {
+++        fprintf(2, "Usage: find path file.\n");
+++        exit(0);
+++    }
+++    
+++    char* path = argv[1];  // Extract the path from command-line arguments
+++    char* name = argv[2];  // Extract the file name to search from command-line arguments
+++    
+++    // Call the find function to search for the file
+++    find(path, name);
+++    
+++    exit(0);
+++}
++\ No newline at end of file
++diff --git a/user/pingpong.c b/user/pingpong.c
++new file mode 100644
++index 0000000..cee7013
++--- /dev/null
+++++ b/user/pingpong.c
++@@ -0,0 +1,55 @@
+++#include "kernel/types.h"
+++#include "kernel/stat.h"
+++#include "user/user.h"
+++
+++int main()
+++{
+++    int p2c[2], c2p[2];
+++    int child_id;
+++    char* ping = "ping";
+++    char* pong = "pong";
+++    char buf[512] = {0};
+++
+++    // Create pipes
+++    if (pipe(p2c) == -1 || pipe(c2p) == -1) 
+++    {
+++        fprintf(2, "Error: pipe creation error.\n");
+++        exit(1);
+++    }
+++
+++    child_id = fork();
+++    if (child_id < 0) 
+++    {
+++        fprintf(2, "Error: fork failed.\n");
+++        exit(1);
+++    }
+++
+++    if(child_id != 0)
+++    {
+++        // parent process
+++        close(p2c[0]); // close read only write
+++        close(c2p[1]); // close write only read
+++
+++        // write ping to the child process (p2c)
+++        write(p2c[1], ping, strlen(ping));
+++
+++        // after write then read from the child process (c2p)
+++        read(c2p[0], buf, sizeof(buf));
+++        printf("%d: received %s\n", getpid(), buf);
+++        exit(0);
+++    }
+++    else
+++    {
+++        // child process
+++        close(p2c[1]); // close write only read
+++        close(c2p[0]); // close read only write
+++
+++        // read from the parent process
+++        read(p2c[0], buf, sizeof(buf));
+++        printf("%d: received %s\n", getpid(), buf);
+++
+++        // write to the parent process
+++        write(c2p[1], pong, strlen(pong));
+++        exit(0);
+++    }
+++}
++diff --git a/user/primes.c b/user/primes.c
++new file mode 100644
++index 0000000..b4f4b31
++--- /dev/null
+++++ b/user/primes.c
++@@ -0,0 +1,82 @@
+++#include "kernel/types.h"
+++#include "user/user.h"
+++
+++// Dùng sàng Eratosthenes
+++void
+++parent(int outfd, int maxn)
+++{   
+++    // Đầu ra là outfd (file description)
+++    for (int i = 2; i <= maxn; ++i)
+++    {
+++        write(outfd, &i, 4);
+++        // 4 là 4 byte (32 bits) là kích thước của một biến kiểu int
+++    }
+++}
+++
+++void
+++child(int infd)
+++{
+++    int btr;
+++    int n, prime;
+++    int p[2];
+++
+++    // process first number
+++    btr = read(infd, &n, 4); // lưu kết quả trả về từ hàm read
+++    if (btr == 0)
+++    {
+++        return;
+++    }
+++    printf("prime %d\n", n);
+++    prime = n;
+++
+++    // process the rest number
+++    pipe(p);
+++    if (fork() == 0) // tạo một quy trình con
+++    {
+++        close(p[1]);
+++        // Đóng đầu ghi của ống trong quá trình con. Quá trình con chỉ đọc dữ liệu từ ống, không ghi vào ống này.
+++        child(p[0]);
+++        // Gọi lại hàm child đệ quy với đầu đọc của ống làm đầu vào. Quá trình con tiếp tục xử lý các số từ đầu vào (p[0]).
+++        close(p[0]);
+++        // Đóng đầu đọc của ống trong quá trình con
+++        exit(0);
+++    }
+++
+++    close(p[0]);
+++    while (read(infd, &n, 4)) 
+++    {
+++        // Nếu n là số nguyên tố
+++        if (n % prime == 0)
+++        {
+++            continue;
+++        }
+++        // ghi của ống p[1] để chuyển đến các quy trình con khác để tiếp tục xử lý
+++        write(p[1], &n, 4);
+++    }
+++    close(p[1]); // Sau khi tất cả các số đã được xử lý, đầu ghi của ống p[1]
+++    wait(0); // đợi cho đến khi tất cả các quy trình con kết thúc
+++}
+++
+++int
+++main(int argc, char *argv[])
+++{
+++    int p[2]; // parent => child
+++    pipe(p);
+++    // parent
+++    if(fork()) 
+++    {
+++        close(p[0]);
+++        parent(p[1], 35);
+++        close(p[1]);
+++        wait(0);
+++    }
+++    // child
+++    else 
+++    {
+++        close(p[1]);
+++        child(p[0]);
+++        close(p[0]);
+++        exit(0);
+++    }
+++    exit(0);
+++}
++\ No newline at end of file
++diff --git a/user/sleep.c b/user/sleep.c
++new file mode 100644
++index 0000000..f5fb211
++--- /dev/null
+++++ b/user/sleep.c
++@@ -0,0 +1,22 @@
+++#include "kernel/types.h"
+++#include "kernel/stat.h"
+++#include "user/user.h"
+++
+++int 
+++main(int argc, char* argv[]) // Điểm nhập của chương trình với đối số dòng lệnh
+++{
+++    // Kiểm tra xem số lượng đối số được cung cấp có khác 2 không
+++    if (argc != 2) 
+++    {
+++        fprintf(2, "Usage: sleep + [time]\n");
+++    }
+++    int time = atoi(*++argv);
+++    // Chuyển đổi biểu diễn chuỗi của thời gian thành số nguyên bằng cách sử dụng hàm atoi
+++    // Tăng con trỏ argv để trỏ đến đối số tiếp theo (thời gian) và giải tham chiếu nó để lấy giá trị
+++    // Lưu trữ giá trị thời gian đã chuyển đổi vào biến 'time'
+++    if (sleep(time) != 0) 
+++    {
+++        fprintf(2, "Error in sleep sys_call!\n");
+++    }
+++    exit(0); // Thoát khỏi chương trình 0 (thực thi thành công)
+++}
++\ No newline at end of file
++diff --git a/user/user.h b/user/user.h
++index 4d398d5..f8d9740 100644
++--- a/user/user.h
+++++ b/user/user.h
++@@ -1,4 +1,5 @@
++ struct stat;
+++struct sysinfo;
++ 
++ // system calls
++ int fork(void);
++@@ -22,6 +23,10 @@ int getpid(void);
++ char* sbrk(int);
++ int sleep(int);
++ int uptime(void);
+++// trace function
+++int trace(int);
+++// sys_info function
+++int sysinfo(struct sysinfo *);
++ 
++ // ulib.c
++ int stat(const char*, struct stat*);
++diff --git a/user/usys.pl b/user/usys.pl
++index 01e426e..353a1f8 100755
++--- a/user/usys.pl
+++++ b/user/usys.pl
++@@ -36,3 +36,5 @@ entry("getpid");
++ entry("sbrk");
++ entry("sleep");
++ entry("uptime");
+++entry("trace");
+++entry("sysinfo");
++\ No newline at end of file
++diff --git a/user/xargs.c b/user/xargs.c
++new file mode 100644
++index 0000000..1d1d496
++--- /dev/null
+++++ b/user/xargs.c
++@@ -0,0 +1,49 @@
+++#include "kernel/types.h"
+++#include "kernel/stat.h"
+++#include "user/user.h"
+++#include "kernel/param.h"
+++
+++int main(int argc, char *argv[])
+++{
+++    char *args[MAXARG];
+++    char line[512];
+++    int i;
+++
+++    if(argc < 2){
+++        fprintf(2, "Usage: xargs command ...\n");
+++        exit(1);
+++    }
+++
+++    // Check for -n option and shift arguments if found
+++    if(argv[1][0] == '-' && argv[1][1] == 'n' && argv[1][2] == '\0') {
+++        for(i = 0; i < argc-3; i++){
+++            args[i] = argv[i+3];
+++        }
+++    } else {
+++        for(i = 0; i < argc-1; i++){
+++            args[i] = argv[i+1];
+++        }
+++    }
+++
+++    args[i] = line;
+++    args[i+1] = 0;
+++
+++    while(1){
+++        gets(line, sizeof(line));
+++        if(line[0] == '\0') break;  // break the loop if gets returns an empty string
+++
+++        int len = strlen(line);
+++        if (len > 0 && line[len - 1] == '\n') {
+++            line[len - 1] = 0;  // replace newline with null
+++        }
+++
+++        if(fork() == 0){
+++            exec(args[0], args);
+++            fprintf(2, "\n", args[0]);
+++            exit(1);
+++        }
+++        wait(0);
+++    }
+++
+++    exit(0);
+++}
+diff --git a/Makefile b/Makefile
+index 365c91b..1eb11f5 100644
+--- a/Makefile
++++ b/Makefile
+@@ -30,7 +30,8 @@ OBJS = \
+   $K/sysfile.o \
+   $K/kernelvec.o \
+   $K/plic.o \
+-  $K/virtio_disk.o
++  $K/virtio_disk.o \
++  $K/sysinfo.o \
+ 
+ OBJS_KCSAN = \
+   $K/start.o \
+@@ -172,6 +173,8 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
+ .PRECIOUS: %.o
+ 
+ UPROGS=\
++	$U/_trace\
++	$U/_sysinfotest\
+ 	$U/_cat\
+ 	$U/_echo\
+ 	$U/_forktest\
+@@ -188,7 +191,11 @@ UPROGS=\
+ 	$U/_grind\
+ 	$U/_wc\
+ 	$U/_zombie\
+-
++	$U/_sleep\
++	$U/_pingpong\
++	$U/_primes\
++	$U/_find\
++	$U/_xargs\
+ 
+ 
+ 
+diff --git a/answers-syscall.txt b/answers-syscall.txt
+new file mode 100644
+index 0000000..3e9bb97
+--- /dev/null
++++ b/answers-syscall.txt
+@@ -0,0 +1,33 @@
++1. Looking at the backtrace output, which function called syscall?
++-> Syscall được gọi bởi usertrap, được thể hiện trong output của backtrace.
++
++2. What is the value of p->trapframe->a7 and what does that value represent? (Hint: look user/initcode.S, the first user program xv6 starts.)
++-   Giá trị của p->trapframe->a7 bằng 7
++-	Mở thư mục initcode.S trong user, ta thấy number syscall được lưu trong thanh ghi a7.
++-	Trong trường hợp này, number syscall là 7. Mở file kernal/syscall.h để xem chi tiết. Số 7 đại dại cho SYS_exec.
++
++3. What was the previous mode that the CPU was in?
++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, bit SPP chỉ ra cấp độ đặc quyền mà một hart đang thực thi trước khi vào chế độ giám sát. Khi một trap được thực hiện, SPP được thiết lập thành 0 nếu trap xuất phát từ chế độ người dùng, hoặc 1 nếu không. Khi một lệnh SRET (xem Mục 3.3.2) được thực thi để trở về từ trình xử lý trap, cấp độ đặc quyền được thiết lập tương ứng.
++-	Như ta có thể thấy, giá trị của bit SPP là 0, điều này chỉ ra rằng cấp độ đặc quyền trước khi vào kernel để thực hiện cuộc gọi hệ thống là chế độ người dùng (user mode).
++-	Tiếp theo, thực hiện thay thế câu lệnh num = p->trapframe->a7 bằng num = * (int *) 0 trong hàm syscall của kernel/syscall.c.
++
++4. Write down the assembly instruction the kernel is panicing at. Which register corresponds to the varialable num?
++xv6 kernel is booting
++
++hart 2 starting
++hart 1 starting
++scause 0x000000000000000d
++sepc=0x0000000080002052 stval=0x0000000000000000
++panic: kerneltrap
++
++-	Sepc cho biết địa chỉ của mã nơi mà kernal đang gặp sự cố. Trong trường hợp này ta tìm kiếm địa chỉ 80002052 trong kernal/kernal.asm
++-	Dựa vào đoạn code trên, có thể thấy chính sự thay đổi câu lệnh gây ra lỗi cho kernal. Tương đương cho câu lệnh lỗi này băng ngôn ngữ assembly là lw a3,0(zero) với num là s2.
++
++5. Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in scause above? (See description of scause in RISC-V privileged instructions)
++-	Theo các hướng dẫn về các lệnh đặc quyền của RISC-V, giá trị 13 ở đây đại diện cho một lỗi trang tải. Cụ thể, một lỗi đã xảy ra trong khi tải dữ liệu từ địa chỉ bộ nhớ 0 vào s2. Có thể thấy từ sách giáo trình, địa chỉ 0 không ánh xạ vào không gian kernel; thay vào đó, nó bắt đầu tại địa chỉ ảo 0x80000000.
++
++6. What is the name of the binary that was running when the kernel paniced? What is its process id (pid)?
++-    Thông tin này có thể được lấy bằng cách in ra trường 'name' của cấu trúc dữ liệu 'proc':
++$1 = "initcode\000\000\000\000\000\000\000"
++-    Có thể thấy rằng chương trình người dùng này là initcode, chính là quá trình đầu tiên trong xv6. In ra cấu trúc proc sẽ cho phép ta kiểm tra thêm thông tin về quá trình này.
++-    Khi đó ta thấy pid của initcode là 1
+\ No newline at end of file
+diff --git a/command.txt b/command.txt
+new file mode 100644
+index 0000000..9c66511
+--- /dev/null
++++ b/command.txt
+@@ -0,0 +1,12 @@
++./grade-lab-syscall [syscall name]
++
++test trace:
++$ trace 32 grep hello README
++$ trace 2147483647 grep hello README
++$ grep hello README
++$ trace 2 usertests forkforkfork
++
++swtich  to syscall:
++$ git fetch
++$ git checkout syscall
++$ make clean
+\ No newline at end of file
+diff --git a/kernel/defs.h b/kernel/defs.h
+index a3c962b..3b4319a 100644
+--- a/kernel/defs.h
++++ b/kernel/defs.h
+@@ -8,6 +8,7 @@ struct spinlock;
+ struct sleeplock;
+ struct stat;
+ struct superblock;
++struct sysinfo;
+ 
+ // bio.c
+ void            binit(void);
+@@ -16,6 +17,7 @@ void            brelse(struct buf*);
+ void            bwrite(struct buf*);
+ void            bpin(struct buf*);
+ void            bunpin(struct buf*);
++int             freemem(void);
+ 
+ // console.c
+ void            consoleinit(void);
+@@ -69,6 +71,7 @@ void            initlog(int, struct superblock*);
+ void            log_write(struct buf*);
+ void            begin_op(void);
+ void            end_op(void);
++int             nproc(void);
+ 
+ // pipe.c
+ int             pipealloc(struct file**, struct file**);
+@@ -110,6 +113,9 @@ void            procdump(void);
+ // swtch.S
+ void            swtch(struct context*, struct context*);
+ 
++// sysinfo.c
++int             systeminfo(uint64);
++
+ // spinlock.c
+ void            acquire(struct spinlock*);
+ int             holding(struct spinlock*);
+diff --git a/kernel/kalloc.c b/kernel/kalloc.c
+index 0699e7e..0e149f1 100644
+--- a/kernel/kalloc.c
++++ b/kernel/kalloc.c
+@@ -8,6 +8,8 @@
+ #include "spinlock.h"
+ #include "riscv.h"
+ #include "defs.h"
++#include "kernel/sleeplock.h"
++#include "kernel/proc.h"
+ 
+ void freerange(void *pa_start, void *pa_end);
+ 
+@@ -80,3 +82,19 @@ kalloc(void)
+     memset((char*)r, 5, PGSIZE); // fill with junk
+   return (void*)r;
+ }
++
++// Get the number of bytes of free memory
++int
++freemem(void)
++{
++  int n = 0;
++  struct run *r;
++  acquire(&kmem.lock);
++  
++  for (r = kmem.freelist; r; r = r->next)
++    n++;
++
++  release(&kmem.lock);
++
++  return n * 4096;
++}
+\ No newline at end of file
+diff --git a/kernel/proc.c b/kernel/proc.c
+index 58a8a0b..71fc009 100644
+--- a/kernel/proc.c
++++ b/kernel/proc.c
+@@ -10,6 +10,8 @@ struct cpu cpus[NCPU];
+ 
+ struct proc proc[NPROC];
+ 
++struct proc ptable[NPROC];
++
+ struct proc *initproc;
+ 
+ int nextpid = 1;
+@@ -296,6 +298,9 @@ fork(void)
+   }
+   np->sz = p->sz;
+ 
++  // copy trace mask value
++  np->mask = p->mask;
++
+   // copy saved user registers.
+   *(np->trapframe) = *(p->trapframe);
+ 
+@@ -686,3 +691,19 @@ procdump(void)
+     printf("\n");
+   }
+ }
++
++int
++nproc(void)
++{
++  int n = 0;
++  struct proc *p;
++
++  for(p = proc; p < &proc[NPROC]; p++) {
++    acquire(&p->lock);
++    if(p->state != UNUSED)
++      n++;
++    release(&p->lock);
++  }
++
++  return n;
++}
+\ No newline at end of file
+diff --git a/kernel/proc.h b/kernel/proc.h
+index d021857..ac9816e 100644
+--- a/kernel/proc.h
++++ b/kernel/proc.h
+@@ -85,6 +85,9 @@ enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
+ struct proc {
+   struct spinlock lock;
+ 
++  // trace mask value
++  uint64 mask;                  
++
+   // p->lock must be held when using these:
+   enum procstate state;        // Process state
+   void *chan;                  // If non-zero, sleeping on chan
+@@ -103,5 +106,5 @@ struct proc {
+   struct context context;      // swtch() here to run process
+   struct file *ofile[NOFILE];  // Open files
+   struct inode *cwd;           // Current directory
+-  char name[16];               // Process name (debugging)
++  char name[16];               // Process name (debugging)    
+ };
+diff --git a/kernel/syscall.c b/kernel/syscall.c
+index ed65409..444c841 100644
+--- a/kernel/syscall.c
++++ b/kernel/syscall.c
+@@ -6,6 +6,7 @@
+ #include "proc.h"
+ #include "syscall.h"
+ #include "defs.h"
++#include "sysinfo.h"
+ 
+ // Fetch the uint64 at addr from the current process.
+ int
+@@ -101,6 +102,8 @@ extern uint64 sys_unlink(void);
+ extern uint64 sys_link(void);
+ extern uint64 sys_mkdir(void);
+ extern uint64 sys_close(void);
++extern uint64 sys_trace(void);
++extern uint64 sys_sysinfo(void);
+ 
+ // An array mapping syscall numbers from syscall.h
+ // to the function that handles the system call.
+@@ -126,6 +129,34 @@ static uint64 (*syscalls[])(void) = {
+ [SYS_link]    sys_link,
+ [SYS_mkdir]   sys_mkdir,
+ [SYS_close]   sys_close,
++[SYS_trace]   sys_trace,
++[SYS_sysinfo] sys_sysinfo,
++};
++
++// the system call name index array
++static char* syscalls_name[] = {
++[SYS_fork]    "syscall fork",
++[SYS_exit]    "syscall exit",
++[SYS_wait]    "syscall wait",
++[SYS_pipe]    "syscall pipe",
++[SYS_read]    "syscall read",
++[SYS_kill]    "syscall kill",
++[SYS_exec]    "syscall exec",
++[SYS_fstat]   "syscall fstat",
++[SYS_chdir]   "syscall chdir",
++[SYS_dup]     "syscall dup",
++[SYS_getpid]  "syscall getpid",
++[SYS_sbrk]    "syscall sbrk",
++[SYS_sleep]   "syscall sleep",
++[SYS_uptime]  "syscall uptime",
++[SYS_open]    "syscall open",
++[SYS_write]   "syscall write",
++[SYS_mknod]   "syscall mknod",
++[SYS_unlink]  "syscall unlink",
++[SYS_link]    "syscall link",
++[SYS_mkdir]   "syscall mkdir",
++[SYS_close]   "syscall close",
++[SYS_trace]   "syscall trace",
+ };
+ 
+ void
+@@ -138,7 +169,11 @@ syscall(void)
+   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+     // Use num to lookup the system call function for num, call it,
+     // and store its return value in p->trapframe->a0
+-    p->trapframe->a0 = syscalls[num]();
++    uint64 a0 = syscalls[num]();
++    if ((p->mask >> num) & 0b1) {
++      printf("%d: %s -> %d\n", p->pid, syscalls_name[num], a0);
++    }
++    p->trapframe->a0 = a0;
+   } else {
+     printf("%d %s: unknown sys call %d\n",
+             p->pid, p->name, num);
+diff --git a/kernel/syscall.h b/kernel/syscall.h
+index bc5f356..0dfedc7 100644
+--- a/kernel/syscall.h
++++ b/kernel/syscall.h
+@@ -20,3 +20,5 @@
+ #define SYS_link   19
+ #define SYS_mkdir  20
+ #define SYS_close  21
++#define SYS_trace  22
++#define SYS_sysinfo 23
+diff --git a/kernel/sysfile.c b/kernel/sysfile.c
+index 16b668c..7d79481 100644
+--- a/kernel/sysfile.c
++++ b/kernel/sysfile.c
+@@ -15,6 +15,7 @@
+ #include "sleeplock.h"
+ #include "file.h"
+ #include "fcntl.h"
++#include "sysinfo.h"
+ 
+ // Fetch the nth word-sized system call argument as a file descriptor
+ // and return both the descriptor and the corresponding struct file.
+diff --git a/kernel/sysinfo.c b/kernel/sysinfo.c
+new file mode 100644
+index 0000000..09cdb35
+--- /dev/null
++++ b/kernel/sysinfo.c
+@@ -0,0 +1,22 @@
++#include "types.h"
++#include "riscv.h"
++#include "param.h"
++#include "spinlock.h"
++#include "defs.h"
++#include "sysinfo.h"
++#include "proc.h"
++
++// Get current system info
++// addr is a user virtual address, pointing to a struct sysinfo.
++int
++systeminfo(uint64 addr) {
++  struct proc *p = myproc();
++  struct sysinfo info;
++
++  info.freemem = freemem();
++  info.nproc = nproc();
++
++  if(copyout(p->pagetable, addr, (char *)&info, sizeof(info)) < 0)
++    return -1;
++  return 0;
++}
+\ No newline at end of file
+diff --git a/kernel/sysproc.c b/kernel/sysproc.c
+index 3b4d5bd..79fd2a5 100644
+--- a/kernel/sysproc.c
++++ b/kernel/sysproc.c
+@@ -5,6 +5,7 @@
+ #include "memlayout.h"
+ #include "spinlock.h"
+ #include "proc.h"
++#include "sysinfo.h"
+ 
+ uint64
+ sys_exit(void)
+@@ -91,3 +92,24 @@ sys_uptime(void)
+   release(&tickslock);
+   return xticks;
+ }
++
++//sys_trace
++uint64
++sys_trace(void)
++{
++  int mask;
++
++  argint(0, &mask);
++  struct proc *p = myproc();
++  p->mask = mask;
++  return 0;
++}
++
++//sys_info
++uint64
++sys_sysinfo(void)
++{
++  uint64 info;
++  argaddr(0, &info);
++  return systeminfo(info);
++}
+\ No newline at end of file
+diff --git a/time.txt b/time.txt
+new file mode 100644
+index 0000000..c5b431b
+--- /dev/null
++++ b/time.txt
+@@ -0,0 +1 @@
++50
+\ No newline at end of file
+diff --git a/user/find.c b/user/find.c
+new file mode 100644
+index 0000000..c321a9a
+--- /dev/null
++++ b/user/find.c
+@@ -0,0 +1,154 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "kernel/fs.h"
++#include "user/user.h"
++
++
++/*
++ * Function to remove trailing white spaces from a string
++ * Parameters:
++ *   - path: The string to be trimmed
++ * Returns:
++ *   - A pointer to the modified string
++ */
++char* 
++rtrim(char* path)
++{
++    static char newStr[DIRSIZ+1];  // Static buffer to hold the modified string
++    int whiteSpaceSize = 0;         // Variable to store the size of trailing white spaces
++    int bufSize = 0;                // Variable to store the size of the resulting string
++    
++    // Loop through the string from the end to find the trailing white spaces
++    for(char* p = path + strlen(path) - 1; p >= path && *p == ' '; --p) 
++    {
++        ++whiteSpaceSize;  // Counting the trailing white spaces
++    }
++    
++    // Calculate the size of the resulting string after trimming white spaces
++    bufSize = DIRSIZ - whiteSpaceSize;
++    
++    // Copy non-white space characters from the original string to the new string buffer
++    memmove(newStr, path, bufSize);
++    
++    // Null-terminate the new string
++    newStr[bufSize] = '\0';
++    
++    // Return the modified string
++    return newStr;
++}
++
++/*
++ * Recursive function to find a file in a directory and its subdirectories
++ * Parameters:
++ *   - path: The directory path to search
++ *   - name: The name of the file to find
++ */
++void 
++find(char* path, char* name)
++{
++    char buf[512], *p;              // Buffer to hold file paths, pointer for manipulation
++    int fd;                         // File descriptor for directory
++    struct dirent de;               // Directory entry structure
++    struct stat st;                 // File status structure
++    
++    // Open the directory specified by the path
++    if ((fd = open(path, 0)) < 0) 
++    {
++        fprintf(2, "find: cannot open %s\n", path);
++        return;
++    }
++
++    // Get file status of the directory
++    if (fstat(fd, &st) == -1) 
++    {
++        fprintf(2, "find: cannot fstat %s\n", path);
++        close(fd);
++        return;
++    }
++
++    // Switch statement to handle different types of files/directories
++    switch (st.type) 
++    {
++
++        case T_DEVICE:
++        case T_FILE:
++            fprintf(2, "find: %s not a path value.\n", path);
++            close(fd);
++            // printf("==='%s' is a File\n", path);
++            break;
++        case T_DIR:
++            // Check if the path length exceeds the buffer size
++            if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf)
++            {
++                printf("ls: path too long\n");
++                break;
++            }
++            
++            // Create the full path by copying the original path
++            strcpy(buf, path);
++            p = buf + strlen(buf);
++            *p++ = '/';
++            
++            // Read directory information for files and subdirectories
++            while (read(fd, &de, sizeof(de)) == sizeof de) 
++            {
++                if (de.inum == 0)
++                    continue;
++                
++                // Skip the current directory (.) and parent directory (..)
++                if (strcmp(".", rtrim(de.name)) == 0 || strcmp("..", rtrim(de.name)) == 0)
++                    continue;
++                
++                // Append the file/subdirectory name to the path
++                memmove(p, de.name, DIRSIZ);
++                
++                // Null-terminate the path
++                p[DIRSIZ] = '\0';
++                
++                // Get the file status of the current file/subdirectory
++                if (stat(buf, &st) == -1) 
++                {
++                    fprintf(2, "find: cannot stat '%s'\n", buf);
++                    continue;
++                }
++                
++                // Print the full path if the file name matches the search name
++                if (st.type == T_DEVICE || st.type == T_FILE) 
++                {
++                    if (strcmp(name, rtrim(de.name)) == 0) 
++                    {
++                        printf("%s\n", buf);
++                        /*for (int i = 0; buf[i] != '\0'; ++i) 
++                        {
++                            printf("'%d'\n", buf[i]);
++                        }*/
++
++                    }
++                }
++                // Recursively search if the entry is a directory
++                else if (st.type == T_DIR) 
++                {
++                    find(buf, name);
++                }
++            }
++    }
++}
++
++int 
++main(int argc, char* argv[])
++{
++    // Check if the number of command-line arguments is correct
++    if (argc != 3) 
++    {
++        fprintf(2, "Usage: find path file.\n");
++        exit(0);
++    }
++    
++    char* path = argv[1];  // Extract the path from command-line arguments
++    char* name = argv[2];  // Extract the file name to search from command-line arguments
++    
++    // Call the find function to search for the file
++    find(path, name);
++    
++    exit(0);
++}
+\ No newline at end of file
+diff --git a/user/pingpong.c b/user/pingpong.c
+new file mode 100644
+index 0000000..cee7013
+--- /dev/null
++++ b/user/pingpong.c
+@@ -0,0 +1,55 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++
++int main()
++{
++    int p2c[2], c2p[2];
++    int child_id;
++    char* ping = "ping";
++    char* pong = "pong";
++    char buf[512] = {0};
++
++    // Create pipes
++    if (pipe(p2c) == -1 || pipe(c2p) == -1) 
++    {
++        fprintf(2, "Error: pipe creation error.\n");
++        exit(1);
++    }
++
++    child_id = fork();
++    if (child_id < 0) 
++    {
++        fprintf(2, "Error: fork failed.\n");
++        exit(1);
++    }
++
++    if(child_id != 0)
++    {
++        // parent process
++        close(p2c[0]); // close read only write
++        close(c2p[1]); // close write only read
++
++        // write ping to the child process (p2c)
++        write(p2c[1], ping, strlen(ping));
++
++        // after write then read from the child process (c2p)
++        read(c2p[0], buf, sizeof(buf));
++        printf("%d: received %s\n", getpid(), buf);
++        exit(0);
++    }
++    else
++    {
++        // child process
++        close(p2c[1]); // close write only read
++        close(c2p[0]); // close read only write
++
++        // read from the parent process
++        read(p2c[0], buf, sizeof(buf));
++        printf("%d: received %s\n", getpid(), buf);
++
++        // write to the parent process
++        write(c2p[1], pong, strlen(pong));
++        exit(0);
++    }
++}
+diff --git a/user/primes.c b/user/primes.c
+new file mode 100644
+index 0000000..b4f4b31
+--- /dev/null
++++ b/user/primes.c
+@@ -0,0 +1,82 @@
++#include "kernel/types.h"
++#include "user/user.h"
++
++// Dùng sàng Eratosthenes
++void
++parent(int outfd, int maxn)
++{   
++    // Đầu ra là outfd (file description)
++    for (int i = 2; i <= maxn; ++i)
++    {
++        write(outfd, &i, 4);
++        // 4 là 4 byte (32 bits) là kích thước của một biến kiểu int
++    }
++}
++
++void
++child(int infd)
++{
++    int btr;
++    int n, prime;
++    int p[2];
++
++    // process first number
++    btr = read(infd, &n, 4); // lưu kết quả trả về từ hàm read
++    if (btr == 0)
++    {
++        return;
++    }
++    printf("prime %d\n", n);
++    prime = n;
++
++    // process the rest number
++    pipe(p);
++    if (fork() == 0) // tạo một quy trình con
++    {
++        close(p[1]);
++        // Đóng đầu ghi của ống trong quá trình con. Quá trình con chỉ đọc dữ liệu từ ống, không ghi vào ống này.
++        child(p[0]);
++        // Gọi lại hàm child đệ quy với đầu đọc của ống làm đầu vào. Quá trình con tiếp tục xử lý các số từ đầu vào (p[0]).
++        close(p[0]);
++        // Đóng đầu đọc của ống trong quá trình con
++        exit(0);
++    }
++
++    close(p[0]);
++    while (read(infd, &n, 4)) 
++    {
++        // Nếu n là số nguyên tố
++        if (n % prime == 0)
++        {
++            continue;
++        }
++        // ghi của ống p[1] để chuyển đến các quy trình con khác để tiếp tục xử lý
++        write(p[1], &n, 4);
++    }
++    close(p[1]); // Sau khi tất cả các số đã được xử lý, đầu ghi của ống p[1]
++    wait(0); // đợi cho đến khi tất cả các quy trình con kết thúc
++}
++
++int
++main(int argc, char *argv[])
++{
++    int p[2]; // parent => child
++    pipe(p);
++    // parent
++    if(fork()) 
++    {
++        close(p[0]);
++        parent(p[1], 35);
++        close(p[1]);
++        wait(0);
++    }
++    // child
++    else 
++    {
++        close(p[1]);
++        child(p[0]);
++        close(p[0]);
++        exit(0);
++    }
++    exit(0);
++}
+\ No newline at end of file
+diff --git a/user/sleep.c b/user/sleep.c
+new file mode 100644
+index 0000000..f5fb211
+--- /dev/null
++++ b/user/sleep.c
+@@ -0,0 +1,22 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++
++int 
++main(int argc, char* argv[]) // Điểm nhập của chương trình với đối số dòng lệnh
++{
++    // Kiểm tra xem số lượng đối số được cung cấp có khác 2 không
++    if (argc != 2) 
++    {
++        fprintf(2, "Usage: sleep + [time]\n");
++    }
++    int time = atoi(*++argv);
++    // Chuyển đổi biểu diễn chuỗi của thời gian thành số nguyên bằng cách sử dụng hàm atoi
++    // Tăng con trỏ argv để trỏ đến đối số tiếp theo (thời gian) và giải tham chiếu nó để lấy giá trị
++    // Lưu trữ giá trị thời gian đã chuyển đổi vào biến 'time'
++    if (sleep(time) != 0) 
++    {
++        fprintf(2, "Error in sleep sys_call!\n");
++    }
++    exit(0); // Thoát khỏi chương trình 0 (thực thi thành công)
++}
+\ No newline at end of file
+diff --git a/user/user.h b/user/user.h
+index 4d398d5..f8d9740 100644
+--- a/user/user.h
++++ b/user/user.h
+@@ -1,4 +1,5 @@
+ struct stat;
++struct sysinfo;
+ 
+ // system calls
+ int fork(void);
+@@ -22,6 +23,10 @@ int getpid(void);
+ char* sbrk(int);
+ int sleep(int);
+ int uptime(void);
++// trace function
++int trace(int);
++// sys_info function
++int sysinfo(struct sysinfo *);
+ 
+ // ulib.c
+ int stat(const char*, struct stat*);
+diff --git a/user/usys.pl b/user/usys.pl
+index 01e426e..353a1f8 100755
+--- a/user/usys.pl
++++ b/user/usys.pl
+@@ -36,3 +36,5 @@ entry("getpid");
+ entry("sbrk");
+ entry("sleep");
+ entry("uptime");
++entry("trace");
++entry("sysinfo");
+\ No newline at end of file
+diff --git a/user/xargs.c b/user/xargs.c
+new file mode 100644
+index 0000000..1d1d496
+--- /dev/null
++++ b/user/xargs.c
+@@ -0,0 +1,49 @@
++#include "kernel/types.h"
++#include "kernel/stat.h"
++#include "user/user.h"
++#include "kernel/param.h"
++
++int main(int argc, char *argv[])
++{
++    char *args[MAXARG];
++    char line[512];
++    int i;
++
++    if(argc < 2){
++        fprintf(2, "Usage: xargs command ...\n");
++        exit(1);
++    }
++
++    // Check for -n option and shift arguments if found
++    if(argv[1][0] == '-' && argv[1][1] == 'n' && argv[1][2] == '\0') {
++        for(i = 0; i < argc-3; i++){
++            args[i] = argv[i+3];
++        }
++    } else {
++        for(i = 0; i < argc-1; i++){
++            args[i] = argv[i+1];
++        }
++    }
++
++    args[i] = line;
++    args[i+1] = 0;
++
++    while(1){
++        gets(line, sizeof(line));
++        if(line[0] == '\0') break;  // break the loop if gets returns an empty string
++
++        int len = strlen(line);
++        if (len > 0 && line[len - 1] == '\n') {
++            line[len - 1] = 0;  // replace newline with null
++        }
++
++        if(fork() == 0){
++            exec(args[0], args);
++            fprintf(2, "\n", args[0]);
++            exit(1);
++        }
++        wait(0);
++    }
++
++    exit(0);
++}
