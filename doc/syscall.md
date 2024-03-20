@@ -151,7 +151,7 @@ The answer is: the kernel panics at `lw a3,0(zero)`. `num` corresponds to the `a
 -	Sepc cho biết địa chỉ của mã nơi mà kernal đang gặp sự cố. Trong trường hợp này ta tìm kiếm địa chỉ 80002052 trong kernal/kernal.asm
 -	Dựa vào đoạn code trên, có thể thấy chính sự thay đổi câu lệnh gây ra lỗi cho kernal. Tương đương cho câu lệnh lỗi này băng ngôn ngữ assembly là lw a3,0(zero) với num là s2.
 
-0x5
+Then
 
 Run the virtual machine and GDB debugger again. Set a breakpoint at the point where the panic occurs.
 
@@ -179,7 +179,7 @@ So, here `13` represents `Load page fault`, meaning an error occurred when loadi
 
 As you can see, the address 0 in the left Virtual Address corresponds to Unused in the right Physical Address, indicating that this address is not being used. However, the Kernel starts from the virtual address `0x80000000`.
 
-那么问题：
+The question is:
 
 > Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in `scause` above? (See description of `scause` in [RISC-V privileged instructions](https://pdos.csail.mit.edu/6.828/2022/labs/n//github.com/riscv/riscv-isa-manual/releases/download/Priv-v1.12/riscv-privileged-20211203.pdf))
 
