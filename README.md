@@ -12,4 +12,4 @@ Course homepage：[https://pdos.csail.mit.edu/6.828/2023/schedule.html](https://
 
 Lab: Xv6 and Unix utilities : [Analysis](./doc/utils.md) [Code branch](https://github.com/Alrmendo/xv6-labs-2023-solution/tree/util)
 
-Lab: system calls ：[Analysis](./doc/syscall.md) [Code branch](https://github.com/relaxcn/xv6-labs-2022-solutions/tree/syscall)
+Lab: system calls ：[Analysis](./doc/syscall.md) [Code branch](https://github.com/Alrmendo/xv6-labs-2023-solution/tree/syscall)
