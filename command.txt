@@ -1,0 +1,2 @@
+./grade-lab-pgtbl ugetpid  
+pgtbltest
