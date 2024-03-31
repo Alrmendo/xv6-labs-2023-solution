@@ -14,4 +14,4 @@ Lab: Xv6 and Unix utilities : [Analysis](./doc/utils.md) [Code branch](https://g
 
 Lab: system calls ：[Analysis](./doc/syscall.md) [Code branch](https://github.com/Alrmendo/xv6-labs-2023-solution/tree/syscall)
 
-Lab: Page tables： [Analysis](./doc/pagetable.md) [Code branch]
+Lab: Page tables： [Analysis](./doc/pagetable.md) [Code branch](https://github.com/Alrmendo/xv6-labs-2023-solution/tree/pgtbl)
