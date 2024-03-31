@@ -112,6 +112,11 @@ Specific code changes can be found in the [GitHub commit].
 
 Run `./grade-lab-pgtbl ugetpid` to obtain successful information. Alternatively, run `pgtbltest` in qemu. At this point, pgaccess_test will fail, which is the next task.
 
+> Note: Which other xv6 system call(s) could be made faster using this shared page? Explain how.
+
+Answer:
+  Any system call that directly or indirectly invokes the `copyout` fuction will be accelerated, as it saves time on copying data. Additionally, system calls used purely for information retrieval, such as `getpid` in this section, will also be faster. This is because the operation of trapping into the operating system is no longer necessary, and the corresponding data can be read in usermode instead.
+
 ## Print a page table
 
 The second task is to write a function to print the contents of the page table. This function is defined as `vmprint()`. It should take a parameter of type `pagetable_t` and print according to the following format. Insert `if(p->pid==1) vmprint(p->pagetable)` before `return argc` in `exec.c` to print the page table of the first process.
@@ -172,6 +177,14 @@ vmprint(pagetable_t pagetable)
   }
 }
 ```
+> Note: Explain the output of vmprint in terms of Fig 3-4 from the text. What does page 0 contain? What is in page 2? When running in user mode, could the process read/write the memory mapped by page 1? What does the third to last page contain?
+
+  page0: date and text of process
+  page1: guard page for protect stack by present page0 overflow
+  page2: stack of process
+  page3 to last page: heap, trapfram, trampoline
+
+  ==> When the program is running in user mode, it cannot read/write page 1 (the guard page) because it is designed to protect page 2 (the stack page) from being accessed by the user.
 
 Specific code changes can be found in the [GitHub commit]
 
