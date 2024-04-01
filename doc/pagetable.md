@@ -190,7 +190,7 @@ Specific code changes can be found in the [GitHub commit]
 
 ## Detect which pages have been accessed
 
-首先需要了解的是，在一个 `Risc V Sv32` page table 包含了 2^10 个 PTEs，每一个 4 bytes。`Sv32` PTE 的图示如下：
+First, it's important to understand that in a `RISC-V Sv32` page table, there are 2^10 PTEs, each being 4 bytes. The diagram of an `Sv32` PTE is as follows:
 
 ![image-20221106202219124](./pagetable.assets/image-20221106202219124.png)
 
@@ -227,29 +227,37 @@ Implementation as follows:
 int
 sys_pgaccess(void)
 {
-  uint64 va;
-  int pagenum;
-  uint64 abitsaddr;
-  argaddr(0, &va);
-  argint(1, &pagenum);
-  argaddr(2, &abitsaddr);
+  // lab pgtbl: your code here.
+  int start_va, num_pages;
+  uint64 buffer_addr;
 
-  uint64 maskbits = 0;
-  struct proc *proc = myproc();
-  for (int i = 0; i < pagenum; i++) {
-    pte_t *pte = walk(proc->pagetable, va+i*PGSIZE, 0);
-    if (pte == 0)
-      panic("page not exist.");
-    if (PTE_FLAGS(*pte) & PTE_A) {
-      maskbits = maskbits | (1L << i);
+  argint(0, &start_va);
+  argint(1, &num_pages);
+  argaddr(2, &buffer_addr);
+
+  uint64 buf = 0; // Initialize buffer to 0
+  pte_t *pte;
+  int i;
+
+  struct proc *p = myproc(); // Get current process
+  for (i = 0; i < num_pages; i++) {
+    uint64 va = (uint64)(start_va + i * PGSIZE); // Cast to uint64
+    if ((pte = walk(p->pagetable, va, 0)) == 0) {
+        return -1;
     }
-    // clear PTE_A, set PTE_A bits zero
-    *pte = ((*pte&PTE_A) ^ *pte) ^ 0 ;
+
+    if (*pte & PTE_V && *pte & PTE_A) {
+        buf |= (1ULL << i); // Set the corresponding bit in the buffer if page is accessed
+        *pte &= ~PTE_A; // Clear the access bit
+    }
   }
-  if (copyout(proc->pagetable, abitsaddr, (char *)&maskbits, sizeof(maskbits)) < 0)
-    panic("sys_pgacess copyout error");
+
+  if (copyout(p->pagetable, buffer_addr, (char *)&buf, sizeof(buf)) < 0) { // Cast buffer_addr to uint64
+      return -1;
+  }
 
   return 0;
+}
 }
 ```
 
