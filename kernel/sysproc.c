@@ -75,28 +75,34 @@ int
 sys_pgaccess(void)
 {
   // lab pgtbl: your code here.
-  uint64 va;
-  int pagenum;
-  uint64 abitsaddr;
-  argaddr(0, &va);
-  argint(1, &pagenum);
-  argaddr(2, &abitsaddr);
+  int start_va, num_pages;
+  uint64 buffer_addr;
 
-  uint64 maskbits = 0;
-  struct proc *proc = myproc();
-  for (int i = 0; i < pagenum; i++) {
-    pte_t *pte = walk(proc->pagetable, va+i*PGSIZE, 0);
-    if (pte == 0)
-      panic("page not exist.");
-    if (PTE_FLAGS(*pte) & PTE_A) {
-      maskbits = maskbits | (1L << i);
+  argint(0, &start_va);
+  argint(1, &num_pages);
+  argaddr(2, &buffer_addr);
+
+  uint64 buf = 0; // Initialize buffer to 0
+  pte_t *pte;
+  int i;
+
+  struct proc *p = myproc(); // Get current process
+  for (i = 0; i < num_pages; i++) {
+    uint64 va = (uint64)(start_va + i * PGSIZE); // Cast to uint64
+    if ((pte = walk(p->pagetable, va, 0)) == 0) {
+        return -1;
     }
-    // clear PTE_A, set PTE_A bits zero
-    *pte = ((*pte&PTE_A) ^ *pte) ^ 0 ;
+
+    if (*pte & PTE_V && *pte & PTE_A) {
+        buf |= (1ULL << i); // Set the corresponding bit in the buffer if page is accessed
+        *pte &= ~PTE_A; // Clear the access bit
+    }
   }
-  if (copyout(proc->pagetable, abitsaddr, (char *)&maskbits, sizeof(maskbits)) < 0)
-    panic("sys_pgacess copyout error");
-  
+
+  if (copyout(p->pagetable, buffer_addr, (char *)&buf, sizeof(buf)) < 0) { // Cast buffer_addr to uint64
+      return -1;
+  }
+
   return 0;
 }
 #endif
