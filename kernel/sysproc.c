@@ -81,28 +81,21 @@ sys_pgaccess(void)
   argint(0, &start_va);
   argint(1, &num_pages);
   argaddr(2, &buffer_addr);
-
+    
   uint64 buf = 0; // Initialize buffer to 0
   pte_t *pte;
-  int i;
 
   struct proc *p = myproc(); // Get current process
-  for (i = 0; i < num_pages; i++) {
+  for (int i = 0; i < num_pages; i++) {
     uint64 va = (uint64)(start_va + i * PGSIZE); // Cast to uint64
-    if ((pte = walk(p->pagetable, va, 0)) == 0) {
-        return -1;
-    }
+    pte = walk(p->pagetable, va, 0);
 
     if (*pte & PTE_V && *pte & PTE_A) {
-        buf |= (1ULL << i); // Set the corresponding bit in the buffer if page is accessed
-        *pte &= ~PTE_A; // Clear the access bit
+      buf |= (1ULL << i); // Set the corresponding bit in the buffer if page is accessed
+      *pte &= ~PTE_A; // Clear the access bit
     }
   }
-
-  if (copyout(p->pagetable, buffer_addr, (char *)&buf, sizeof(buf)) < 0) { // Cast buffer_addr to uint64
-      return -1;
-  }
-
+  copyout(p->pagetable, buffer_addr, (char *)&buf, sizeof(buf)); // Cast buffer_addr to uint64
   return 0;
 }
 #endif
